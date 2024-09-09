@@ -1,0 +1,87 @@
+page-my-profile {
+
+.grid{	
+    border-collapse: collapse;
+}
+.col {
+    display: table-cell;
+    border: 1px solid $btn_bc;
+}
+
+.bg-grey{
+	background:$btn_bc;
+}
+
+
+
+
+.item-ios, .item-md, .item-wp{
+	color:$cust_clr1 !important;
+	}
+	
+.item-input-has-focus .item-inner{
+	// border-bottom:2px solid $cust_clr1 !important;
+}
+	
+.text-input-wp {
+    margin: 13px 8px;
+    padding: 0 8px;
+    width: calc(100% - 8px - 8px);
+    border: 0px solid rgba(0, 0, 0, 0.5);
+    line-height: 3rem;
+}
+
+ion-label[fixed], .item-datetime .label{
+	color:$blacktheme !important;
+	font-size: 1.4rem;
+}
+
+.item-select .label-ios, .item-select .label-md, .item-select .label-wp{
+	color:$optcolor !important;
+	width: 100px;
+}
+
+.select-wp{
+	border: 0px solid rgba(0, 0, 0, 0.5);
+}
+
+.select-md .select-icon .select-icon-inner, .select-ios .select-icon .select-icon-inner{
+	color:$lbl_clr ; //#E4C8C0;
+}
+
+.select-wp .select-icon .select-icon-inner{
+	border-top: 2px solid $lbl_clr ; //#E4C8C0;
+	border-right: 2px solid $lbl_clr ; // #E4C8C0;
+}
+
+.datetime-wp .datetime-text{
+	border: 0px solid rgba(0, 0, 0, 0.5);
+	color:$blacktheme !important;
+}
+
+.datetime-text{
+	color:$blacktheme !important;
+}
+
+.datetime-wp{
+	padding:0px;
+}
+
+.button-ios{
+	height: 2.4em !important;
+}
+
+.btn-orange {
+	background-color: $optcolor;	// #c1f0bc; // #fbf5f4;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-flex;
+	margin: 10px 10px;
+	cursor: pointer;
+	width: 25%;
+	height: 05%;
+}
+}

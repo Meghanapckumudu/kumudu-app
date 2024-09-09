@@ -1,0 +1,23 @@
+.custom-tabs .tabbar {
+    background: none;
+    box-shadow: none;
+  }
+  
+  .custom-tabs .tab-button {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-tabs .tab-button-text {
+    color: #000000;
+  }
+  
+  .custom-tabs .tab-button[aria-selected=true] {
+    box-shadow: none;
+  }
+  
+  .custom-tabs .tab-button[aria-selected=true] .tab-button-text {
+    color: $blacktheme;
+  }
+  

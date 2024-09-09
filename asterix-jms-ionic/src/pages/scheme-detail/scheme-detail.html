@@ -1,0 +1,306 @@
+<!--
+  Generated template for the SchemeDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="navigation">
+    <ion-title>Saving Plan Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <ion-toolbar no-border-top class="sub-tab" color="toolbar">
+    <ion-segment [(ngModel)]="viewMode">
+      <ion-segment-button value="Pay">
+        Pay
+      </ion-segment-button>
+
+
+      <ion-segment-button value="Ledger">
+        Ledger
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <div [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'Pay'">
+      <ion-list>
+
+        <ion-grid>
+          <ion-row>
+            <!-- <ion-col col-1></ion-col> -->
+            <ion-col class="bg-grey">
+              <ion-item lines="none" color="primary" no-lines no-margin no-padding>
+                <p margin-left="1"> Amount Accumulated: Rs {{amountCollected}}/- </p>
+                <p margin-left="1" *ngIf="scheme.gold_scheme=='1'"> Total Metal Accumulated: {{goldCollected| number : fractionSize}}
+                  gms </p>
+              </ion-item>
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-8>
+              <ion-item>
+                <ion-label stacked>Group-MemberNo</ion-label>
+                <ion-input type="text" value="" [(ngModel)]="this.GroupMemberNo" readonly=true></ion-input>
+              </ion-item>
+            </ion-col>
+
+            <ion-col col-4 *ngIf="scheme.gold_scheme=='1'">
+              <ion-item>
+                <ion-label stacked>Rate</ion-label>
+                <ion-input type="text" value="" [(ngModel)]="scheme.store_gold_rate" readonly=true></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+           <ion-row>
+               <ion-col col-8>
+              <ion-item>
+                <!-- <ion-label stacked>Current Install's</ion-label> -->  <!-- this line only for mehat's anand jewellers -->
+                 <ion-label stacked>Total/Pending/Due/Current Install's</ion-label> 
+                <ion-input type="text" value="" [(ngModel)]="this.installmentdetails" readonly=true #a1
+                  (keyup.enter)="setFocus(b1)"></ion-input>
+              </ion-item> 
+            </ion-col>   
+            <ion-col col-4>              
+              <ion-item>
+                <ion-label stacked>MaturityDate</ion-label>
+                <ion-input type="text" value="" [(ngModel)]="scheme.MaturityDate" readonly=true #f1
+                  (keyup.enter)="setFocus(g1)"></ion-input>
+              </ion-item>
+            </ion-col>
+       
+          </ion-row> 
+
+
+          <ion-row>
+         
+
+
+            <ion-col col-4 *ngIf="this.isflexigroup==false">
+              <div class="AmtWtText1">
+                <ion-label margin-left="0.1px" stacked>No Of Install's</ion-label>
+                <button ion-button clear icon-only (click)="decrementQty()">
+                  <ion-icon name="remove-circle"></ion-icon>
+                </button>
+                {{this.scheme.PayInstall}}
+                <button ion-button clear icon-only (click)="incrementQty()">
+                  <ion-icon name="add-circle"></ion-icon>
+                </button>
+              </div>
+            </ion-col>
+
+
+            <ion-col col-4 *ngIf="this.isflexigroup==true">
+              <ion-item class="AmtWtText">
+                <ion-label stacked>No Of Install's</ion-label>
+             
+                <ion-input type="text" value="" [(ngModel)]="this.scheme.PayInstall" readonly=true #g1
+                  (keyup.enter)="setFocus(h1)"></ion-input>
+         
+              </ion-item>
+            </ion-col>
+
+            <ion-col col-4 *ngIf="this.isflexigroup==false">
+              <ion-item color="primary" lines="none">
+                <ion-label stacked>Amount</ion-label>
+                <ion-input class="AmtWtText" type="text" value="" [(ngModel)]="scheme.schemeToPayAmount"
+                  (ngModelChange)="onAmountChange()" readonly=true></ion-input>
+              </ion-item>
+            </ion-col>
+
+            <ion-col col-4 *ngIf="this.isflexigroup==true">
+              <ion-item color="primary" lines="none" no-lines>
+                <ion-label stacked>Amount</ion-label>
+                <ion-input class="AmtWtText" type="text" value="" [(ngModel)]="scheme.schemeToPayAmount"
+                  (ngModelChange)="onAmountChange()" readonly=false #h1 (keyup.enter)="setFocus(i1)"></ion-input>
+              </ion-item>
+            </ion-col>
+
+            <ion-col col-4 *ngIf="scheme.gold_scheme=='1'">
+              <ion-item color="primary">
+                <ion-label stacked>Weight</ion-label>
+                <ion-input class="AmtWtText" type="text" value="" [(ngModel)]="scheme.g_balance" readonly=true>
+                </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+        </ion-grid>
+
+        <ion-item style="border-bottom: 1px solid #ccc;" *ngIf="data.userLoginType=='agent'">
+          <ion-label stacked>Remarks</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.remarks" #i1></ion-input>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;" *ngIf="data.userLoginType=='agent'">
+          <ion-label stacked>Paymode</ion-label>
+          <ion-select [(ngModel)]="scheme.mode">
+            <ion-option value="" *ngIf="data.userLoginType=='agent'"></ion-option>
+            <ion-option value="0" *ngIf="data.userLoginType=='agent'">Cash</ion-option>
+          
+            <ion-option value="2" *ngIf="data.userLoginType=='agent'">Credit Card</ion-option>
+            <ion-option value="7" *ngIf="data.userLoginType=='agent'">Neft</ion-option>
+            <ion-option value="1" *ngIf="data.userLoginType=='agent'">Cheque</ion-option>
+            <ion-option value="6">Online Payment</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item *ngIf="data.userLoginType !== 'agent'">
+          <ion-label stacked>Paymode</ion-label>
+          <ion-select [(ngModel)]="scheme.mode">
+            <ion-option value="" *ngIf="data.userLoginType=='agent'"></ion-option>
+            <ion-option value="0" *ngIf="data.userLoginType=='agent'">Cash</ion-option>
+           
+            <ion-option value="2" *ngIf="data.userLoginType=='agent'">Credit Card</ion-option>
+            <ion-option value="7" *ngIf="data.userLoginType=='agent'">Neft</ion-option>
+            <ion-option value="1" *ngIf="data.userLoginType=='agent'">Cheque</ion-option>
+            <ion-option value="6">Online Payment</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item *ngIf="scheme.mode=='7' || scheme.mode=='2'">
+          <ion-label stacked>Card Number</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.chqNo" #j1 (keyup.enter)="setFocus(k1)"></ion-input>
+        </ion-item>
+
+        <ion-item *ngIf="scheme.mode=='1'">
+          <ion-label stacked>Cheque Number</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.chqNo" #j1 (keyup.enter)="setFocus(k1)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="scheme.mode=='1'">
+          <ion-label stacked>Select Bank</ion-label>
+          <ion-select [(ngModel)]="scheme.bank" no-padding no-margin>
+            <ion-option text-wrap *ngFor="let eachbank of this.banklist" value="{{eachbank.bankid}}">
+              {{eachbank.bankname}} </ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item *ngIf="scheme.mode=='1'">
+          <ion-label stacked>Cheque Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="scheme.chequedt"></ion-datetime>
+        </ion-item>
+
+        <ion-row>
+          <ion-col col-6>
+            <ion-item *ngIf="scheme.mode=='1' || scheme.mode=='2' || scheme.mode=='7' ">
+              <ion-label stacked>Cash Paid</ion-label>
+              <ion-input type="text" value="" [(ngModel)]="scheme.extracash" (keyup)="CaclCardChqAmt()"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6 *ngIf="+scheme.extracash > 0">
+            <ion-label stacked *ngIf="scheme.mode=='1'">Cheque Paid</ion-label>
+            <ion-label stacked *ngIf="scheme.mode=='2'">Card Paid</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="scheme.cardchq" [readonly]="true"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <div text-center>
+          <button ion-button *ngIf="this.adjustedscheme==false" default class="btn-pay" [disabled]="disabled"
+            (click)=goToPaymentPage()>Pay</button>
+        </div>
+     
+
+        <div class="CustSection" text-center>Customer Detail</div>
+
+        <ion-item style="border-bottom: 1px solid #ccc;">
+          <ion-label stacked>Title</ion-label>
+          <ion-select [(ngModel)]="scheme.initial">
+            <ion-option value="mr">Mr.</ion-option>
+            <ion-option value="mrs">Mrs.</ion-option>
+            <ion-option value="miss">Miss.</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;">
+          <ion-label stacked>Name</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.name" #a (keyup.enter)="setFocus(b)"></ion-input>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;">
+          <ion-label stacked>Address Line 1</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.address1" #b (keyup.enter)="setFocus(c)"></ion-input>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;">
+          <ion-label stacked>Address Line 2</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.address2" #c (keyup.enter)="setFocus(d)"></ion-input>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;"> 
+          <ion-label stacked>Address Line 3</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.address3" #d (keyup.enter)="setFocus(e)"></ion-input>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;">
+          <ion-label stacked>City</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.place" #e (keyup.enter)="setFocus(f)"></ion-input>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;">
+          <ion-label stacked>Pincode</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.pin" #f (keyup.enter)="setFocus(i)"></ion-input>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;">
+          <ion-label stacked>Phone</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.phone" #i (keyup.enter)="setFocus(k)"></ion-input>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;">
+          <ion-label stacked>Mobile</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.mobile" readonly=true></ion-input>
+        </ion-item>
+        <ion-item style="border-bottom: 1px solid #ccc;">
+          <ion-label stacked>Email</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="scheme.email" #k></ion-input>
+        </ion-item>
+      
+      </ion-list>
+    </div>
+    <div *ngSwitchCase="'Ledger'">
+
+      <ion-grid padding>
+        <ion-row>
+          <ion-col col-8 class="bg-grey">Total Amount Collected:</ion-col>
+          <ion-col col-4>Rs {{amountCollected}}/-</ion-col>
+        </ion-row>
+        <ion-row *ngIf="scheme.gold_scheme=='1'">
+          <ion-col col-8 class="bg-grey">Total Metal Collected:</ion-col>
+          <ion-col col-4>{{goldCollected| number : fractionSize}} gms</ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <hr>
+      <ion-item style="border-bottom: 1px solid #ccc;" *ngFor="let each of ledger">
+        <h2>{{each.voucher_no}}</h2>
+        <ion-row>
+          <ion-col col-6>
+            <p>{{each.voucher_date}}
+            </p>
+            <p *ngIf="scheme.gold_scheme=='1'">
+              <span class="text-wt">Wt : {{each.gross_wt}}</span> @
+              <span class="text-rate">Rate : {{each.rate}}</span>
+            </p>
+        
+
+          </ion-col>
+          <ion-col col-6 style="text-align: right;">
+          
+            <p style="align-content: right;">
+              <span class="text-red">Rs. {{each.amount}}/-</span>
+            </p>
+            <p>
+              <span *ngIf="each.pmode==0">Cash</span>
+              <span *ngIf="each.pmode==2">Credit Card</span>
+              <span *ngIf="each.pmode==6">Online Payment</span>
+              <span *ngIf="each.pmode==1">Cheque</span>
+              <span *ngIf="each.pmode==7">Neft</span>
+            </p>
+
+          </ion-col>
+        </ion-row>
+        <button ion-button clear item-end (click)="print(each)" *ngIf="data.userLoginType=='agent'">
+          <ion-icon name="print"></ion-icon>
+        </button>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

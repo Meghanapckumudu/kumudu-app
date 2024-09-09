@@ -1,0 +1,125 @@
+<!--
+  Generated template for the TesteasypayPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>testeasypay</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>cid</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.epay_cid" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>rid</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.epay_rid" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>crn</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.epay_crn" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>amt</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.epay_amt" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>type</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.epay_type" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>key_id</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.key_id" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>order_id</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.order_id" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>name</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.name" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>description</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.description" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>email</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.email" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>contact</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.contact" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-label stacked>transaction_id</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="epay.transaction_id" readonly=false></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+  <ion-buttons start>
+    <button ion-button (click)="easypay()">easypay</button>
+  </ion-buttons>
+
+  <ion-buttons start>
+    <button ion-button (click)="easypay1()">easypay1</button>
+  </ion-buttons>
+
+  <ion-buttons start>
+    <button ion-button (click)="easypay2()">easypay2</button>
+  </ion-buttons>
+
+
+</ion-content>

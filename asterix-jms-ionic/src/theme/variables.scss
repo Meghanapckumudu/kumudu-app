@@ -1,0 +1,1080 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+@import "ionic.globals";
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+//primary + navigation + toolbar => same color
+$colors: (
+    // primary:    #488aff,
+    primary: #823600,
+    secondary: #32db64,
+    danger: #f53d3d,
+    light: #504242,
+    dark: #222,
+    green: #096b00,
+    jpj: #d67b63,
+    verma: #a80606,
+    cust1: #c70667,
+    cust2: #12054e,
+    rhr: #be950cea,
+    def: #d67b63,
+    navigation:#823600,
+    defnav:#bd3636,
+    cement:#999,
+    // toolbar: #be950cea, 
+);
+
+//new color combination 
+
+// mahalakshmi
+
+$cust_clr1:#cc1111;
+$cust_clr:#f15757; // #ac4e33 ;//#D67B63;
+$btn_bc: #f5f1f1;
+$lbl_clr: #f5f4f4;
+$text-inputclr:#f8c8c8;
+$card-bg:  #f8c8c8;
+$misc-bg: #faf4fa;
+$white-bg: #f8c8c8;
+$heading-bg:#f8c8c8;
+
+$blacktheme:#000;
+$themecolor:#823600;
+$optcolor:#E2A853;
+$headercolor:#130846;
+$boxcolor:#BD9B16;
+$flipfront:#c75300b1;
+$flipback:#8e292984;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#E2A853;
+
+
+
+//rajesh jewellery mart
+/*
+$cust_clr1:#cc1111;
+$cust_clr:#f15757; // #ac4e33 ;//#D67B63;
+$btn_bc: #f5f1f1;
+$lbl_clr: #f5f4f4;
+$text-inputclr:  #f8c8c8;
+$card-bg:  #f8c8c8;
+$misc-bg: #faf4fa;
+$white-bg: #f8c8c8;
+$heading-bg:#f8c8c8;
+
+$blacktheme:#000;
+$themecolor:#bd3636;
+$optcolor:#D26464;
+$headercolor:#130846;
+$boxcolor:#9c2d2de8;
+$flipfront:#8e2929d3;
+$flipback:#8e2929d3;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#D26464;
+/*
+
+
+//ATM
+/*
+$cust_clr1:#cc1111;
+$cust_clr:#f15757; // #ac4e33 ;//#D67B63;
+$btn_bc: #f5f1f1;
+$lbl_clr: #f5f4f4;
+$text-inputclr:  #f8c8c8;
+$card-bg:  #f8c8c8;
+$misc-bg: #faf4fa;
+$white-bg: #f8c8c8;
+$heading-bg:#f8c8c8;
+
+$blacktheme:#000;
+$themecolor:#e40001;
+$optcolor:#904c1f;
+$headercolor:#130846;
+$boxcolor:#9c2d2de8;
+$flipfront:#8e2929d3;
+$flipback:#8e2929d3;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#904c1f;
+*/
+
+
+//anand 
+/*
+$cust_clr1:#420d23; //f1e757
+//$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #ffffff;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+
+$blacktheme:#000;
+$themecolor:#985C36;
+$optcolor:#aa663cdb;
+$headercolor:#130846;
+$boxcolor:#af3222e6;
+$flipfront:#b46a39;
+$flipback:#b46a39;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#aa663c;
+*/
+
+
+//Sri Vasavi Jewellers Hassan
+/*
+$cust_clr1: #ca4f02;
+$cust_clr: #da5a0b;
+$btn_bc: #f8a470;//#f5a16d;
+$lbl_clr: #743e08cb;
+$text-inputclr: #964b00cb;
+$card-bg: #ffd0b3;
+$misc-bg: #ffd0b3;
+$white-bg: white;
+$heading-bg:#FF7722;
+
+$blacktheme:#000;
+$themecolor:#FF5500;
+$optcolor:#8C4D18;
+$headercolor:#130846;
+$boxcolor:#c41812;
+$flipfront:#c75300b1;
+$flipback:#8e292984;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#8C4D18;
+*/
+
+//Navya 
+/*
+$cust_clr1:hsla(46, 88%, 40%, 0.918);
+$cust_clr:#ecb110ea;    
+$btn_bc: #ffffffea;   
+$lbl_clr: #af8b15;
+$text-inputclr:#f7e4a8;
+$card-bg:  #f8e8b1fb;
+$misc-bg: #ebeab8;
+$white-bg: white;
+$heading-bg:#f7e4a8;
+
+$blacktheme:#000;
+$themecolor:#BB8D3D;
+$optcolor:#875029;
+$headercolor:#130846;
+$boxcolor:#98AC00;
+$flipfront:#D9BC9A;
+$flipback:red;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d6;
+$loginiconcoor:#875029; 
+*/
+
+//jai maruthi jewellers
+/*
+$cust_clr1:#cc1111;
+$cust_clr:#f15757; // #ac4e33 ;//#D67B63;
+$btn_bc: #f5f1f1;
+$lbl_clr: #f5f4f4;
+$text-inputclr:#f8c8c8;
+$card-bg:  #f8c8c8;
+$misc-bg: #faf4fa;
+$white-bg: #f8c8c8;
+$heading-bg:#f8c8c8;
+
+$blacktheme:#000;
+$themecolor:#8d3100;
+$optcolor:#f48e03;
+$headercolor:#130846;
+$boxcolor:#BD9B16;
+$flipfront:#f48e03;
+$flipback:#d3a92184;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#f48e03;
+*/
+
+//Ganesh Jewellers SMG
+/*
+$cust_clr1:#420d23; //f1e757
+//$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #ffffff;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+
+$blacktheme:#000;
+$themecolor:#5C1E29;
+$optcolor:#F1BF6A;
+$headercolor:#130846;
+$boxcolor:#af3222e6;
+$flipfront:#F1BF6A;
+$flipback:#b46a39;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#F1BF6A;
+*/
+
+//kgp
+/*
+$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #ffffff;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+
+$blacktheme:#000;
+$themecolor: #F5D372;
+$optcolor:#3D0005;
+$headercolor:#130846;
+$boxcolor:#9A1D23;
+$flipfront:#CBDBF2;
+$flipback:#8e292984;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#000000;
+*/
+
+//sunrise abharan
+/*
+$cust_clr1:hsla(46, 88%, 40%, 0.918);
+$cust_clr:#ecb110ea;    
+$btn_bc: #ffffffea;   
+$lbl_clr: #af8b15;
+$text-inputclr:#f7e4a8;
+$card-bg:  #f8e8b1fb;
+$misc-bg: #ebeab8;
+$white-bg: white;
+$heading-bg:#f7e4a8;
+
+
+$blacktheme:#000;
+$themecolor:#ba853a;
+$optcolor:#000000ea;
+$headercolor:#130846;
+$boxcolor:#ba853a;
+$flipfront:#ba853a;
+$flipback:red;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#efeaea91;
+$loginiconcoor:#000000ea; 
+*/
+
+//madhuri
+/*
+$cust_clr1:hsla(46, 88%, 40%, 0.918);
+$cust_clr:#ecb110ea;    
+$btn_bc: #ffffffea;   
+$lbl_clr: #af8b15;
+$text-inputclr:#f7e4a8;
+$card-bg:  #f8e8b1fb;
+$misc-bg: #ebeab8;
+$white-bg: white;
+$heading-bg:#f7e4a8;
+
+$blacktheme:#000;
+$themecolor:#d7b369;
+$optcolor:#875029;
+$headercolor:#130846;
+$boxcolor:#FEB601;
+$flipfront:#d7b369;
+$flipback:red;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#efeaea91;
+$loginiconcoor:#875029; 
+*/
+
+//jp jewellers
+/*
+$cust_clr1:hsla(46, 88%, 40%, 0.918);
+$cust_clr:#ecb110ea;    
+$btn_bc: #ffffffea;   
+$lbl_clr: #af8b15;
+$text-inputclr:#f7e4a8;
+$card-bg:  #f8e8b1fb;
+$misc-bg: #ebeab8;
+$white-bg: white;
+$heading-bg:#f7e4a8;
+
+$blacktheme:#000;
+$themecolor:#935A00;
+$optcolor:#EAC247;
+$headercolor:#130846;
+$boxcolor:#FEB601;
+$flipfront:#EAC247;
+$flipback:red;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#efeaea91;
+$loginiconcoor:#EAC247;
+*/
+
+
+//SSJP
+/*
+$cust_clr1:#cc1111;
+$cust_clr:#f15757; // #ac4e33 ;//#D67B63;
+$btn_bc: #ffffff;
+$lbl_clr: #f5f4f4;
+$text-inputclr:  #f8c8c8;
+$card-bg:  #f8c8c8;
+$misc-bg: #faf4fa;
+$white-bg: #f8c8c8;
+$heading-bg:#f8c8c8;
+
+$blacktheme:#000;
+$themecolor:#bd3636;
+$optcolor:#f4b60be6;
+$headercolor:#130846;
+$boxcolor:#9c2d2de8;
+$flipfront:#f4b60b;
+$flipback:#8e2929d3;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#f4b60be6;
+*
+
+//Sri Roopa
+/*
+$cust_clr1: #090e47;
+$cust_clr: #121a75;
+$btn_bc: #ffffff;
+$lbl_clr: #e7d2d2;
+$text-inputclr: #e4dcdc;
+$card-bg: #e4dcdc;
+$misc-bg: #e4dcdc;
+$white-bg: white;
+$heading-bg:#bdd6f7;
+
+$blacktheme:#000;
+$themecolor:#a98728; 
+$optcolor:#823600;
+$headercolor:#130846;
+$boxcolor:#a98728;
+$flipfront:#823600e4;
+$flipback:#a98728;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#823600;
+*/
+
+//Vikram jewellers
+/*
+$cust_clr1: #090e47;
+$cust_clr: #121a75;
+$btn_bc: #ffffff;
+$lbl_clr: #e7d2d2;
+$text-inputclr: #e4dcdc;
+$card-bg: #e4dcdc;
+$misc-bg: #e4dcdc;
+$white-bg: white;
+$heading-bg:#bdd6f7;
+
+$blacktheme:#000;
+$themecolor:#3a3e7d; 
+$optcolor:#767BC0;
+$headercolor:#130846;
+$boxcolor:#e1ab18;
+$flipfront:#e1ab18;
+$flipback:#e1ab18;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#767BC0;
+*/
+
+//praveen jewellers
+/*
+$cust_clr1:#420d23; //f1e757
+//$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #ffffff;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+
+$blacktheme:#000;
+$themecolor:#d3b24c;
+$optcolor:#68b8c4;
+$headercolor:#130846;
+$boxcolor:#b20000;
+$flipfront:#68b8c4;
+$flipback:#b46a39;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#68b8c4;
+/*
+
+
+//Balaji
+/*
+$cust_clr1:#cc1111;
+$cust_clr:#f15757; // #ac4e33 ;//#D67B63;
+$btn_bc: #f5f1f1;
+$lbl_clr: #f5f4f4;
+$text-inputclr:#f8c8c8;
+$card-bg:  #f8c8c8;
+$misc-bg: #faf4fa;
+$white-bg: #f8c8c8;
+$heading-bg:#f8c8c8;
+
+$blacktheme:#000;
+$themecolor:#823600;
+$optcolor:#E2A853;
+$headercolor:#130846;
+$boxcolor:#BD9B16;
+$flipfront:#c75300b1;
+$flipback:#8e292984;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#E2A853;
+*/
+
+
+//uday
+/*
+$cust_clr1: #8f0909ee;
+$cust_clr: #5a0404ee;
+$btn_bc: #ffffff;
+$lbl_clr: #ffffffee;
+$text-inputclr: #f7d8d8;
+$card-bg: #ffbc05;
+$misc-bg: #fdc4c4;
+$white-bg: white;
+$heading-bg:#8f0909ee;
+
+$blacktheme:#000;
+$themecolor:#be1e2d;
+$optcolor:#ffbc05c5;
+$headercolor:#130846;
+$boxcolor:#be1e2d;
+$flipfront:#cc4432b1;
+$flipback:#cc4432b1;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#ffbc05c5;
+*/
+
+
+//National
+/*
+$cust_clr1: #c50f0f;
+$cust_clr: #da3636;
+$btn_bc: #ffffffe5;
+$lbl_clr: #c29c9c;
+$text-inputclr: #e4dcdc;
+$card-bg: #e4dcdc;
+$misc-bg: #e4dcdc;
+$white-bg: white;
+$heading-bg:#f7cabd;
+
+$blacktheme:#000;
+$themecolor:#ce242d;
+$optcolor:#e75862;
+$headercolor:#130846;
+$boxcolor:#b2373c;
+$flipfront:#8e2929d3;
+$flipback:#8e2929d3;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#e75862;
+*/
+
+// vishwas
+/*
+$cust_clr1: #8f0909ee;
+$cust_clr: #5a0404ee;
+$btn_bc: #ffffffe5;
+$lbl_clr: #8f0909ee;
+$text-inputclr: #f7d8d8;
+$card-bg: #f1cf09e5;
+$misc-bg: #fdc4c4;
+$white-bg: white;
+$heading-bg:#8f0909ee;
+
+$blacktheme:#000;
+$themecolor:#ba853a;
+$optcolor:#000000ea;
+$headercolor:#130846;
+$boxcolor:#ba853a;
+$flipfront:#ba853a;
+$flipback:red;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#efeaea91;
+$loginiconcoor:#000000ea; 
+*/
+
+//vk mani
+/*
+$cust_clr1:hsla(46, 88%, 40%, 0.918);
+$cust_clr:#ecb110ea;    
+$btn_bc: #ffffffea;   
+$lbl_clr: #af8b15;
+$text-inputclr:#f7e4a8;
+$card-bg:  #f8e8b1fb;
+$misc-bg: #ebeab8;
+$white-bg: white;
+$heading-bg:#f7e4a8;
+
+$blacktheme:#000;
+$themecolor:#e8cb56;
+$optcolor:#000000ea;
+$headercolor:#130846;
+$boxcolor:#e8cb56;
+$flipfront:#e8cb56;
+$flipback:red;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#efeaea91;
+$loginiconcoor:#000000ea;
+*/
+
+
+//vaarahi
+/*
+$cust_clr1:#420d23; //f1e757
+//$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #ffffff;
+$lbl_clr: #ffffff;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+
+$blacktheme:#000;
+$themecolor:#985C36;
+$optcolor:#ecc24c;
+$headercolor:#130846;
+$boxcolor:#af3222e6;
+$flipfront:#ecc24c;
+$flipback:#ecc24c;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#ecc24c;
+*/
+
+//sagar jewellers
+/*
+$cust_clr1:#cc1111;
+$cust_clr:#f15757; // #ac4e33 ;//#D67B63;
+$btn_bc: #f5f1f1;
+$lbl_clr: #f5f4f4;
+$text-inputclr:#f8c8c8;
+$card-bg:  #f8c8c8;
+$misc-bg: #faf4fa;
+$white-bg: #f8c8c8;
+$heading-bg:#f8c8c8;
+
+$blacktheme:#000;
+$themecolor:#4b2753;
+$optcolor:#E19825;
+$headercolor:#130846;
+$boxcolor:#BD9B16;
+$flipfront:#E19825;
+$flipback:#e19925da;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#E19825;
+*/
+
+
+//swarnanjali
+/*
+$cust_clr1:hsla(46, 88%, 40%, 0.918);
+$cust_clr:#ecb110ea;    
+$btn_bc: #ffffffea;   
+$lbl_clr: #af8b15;
+$text-inputclr:#f7e4a8;
+$card-bg:  #f8e8b1fb;
+$misc-bg: #ebeab8;
+$white-bg: white;
+$heading-bg:#f7e4a8;
+
+$blacktheme:#000;
+$themecolor: #fe9d00e0;
+$optcolor:#000000ea;
+$headercolor:#130846;
+$boxcolor:#fe9d00e0;
+$flipfront:#fe9d00e0;
+$flipback:red;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#efeaea91;
+$loginiconcoor:#000000ea; 
+*/
+
+/*
+//dhanalakshmi swarna mahal
+$cust_clr1:#420d23; //f1e757
+//$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #ffffff;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+
+$blacktheme:#000;
+$themecolor:#d3b24c;
+$optcolor:#68b8c4;
+$headercolor:#130846;
+$boxcolor:#e7b41cbb;
+$flipfront:#68b8c4;
+$flipback:#b46a39;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#68b8c4;
+
+*/
+
+//kumudu
+/*
+$cust_clr1:#420d23; //f1e757
+//$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #ffffff;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+
+$blacktheme:#000;
+$themecolor:#d3b24c;
+$optcolor:#68b8c4;
+$headercolor:#130846;
+$boxcolor:#e7b41cbb;
+$flipfront:#68b8c4;
+$flipback:#b46a39;
+$menuitemscolor:$blacktheme;
+$menuitemlistbackgroubnd:#e1d6d652;
+$loginiconcoor:#68b8c4;
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//old color combination 
+/* 
+//verma
+$cust_clr: #a80606;
+$btn_bc: #e7d1d1;
+$text-inputclr:  #e7d1d1;
+//primary:    #e49292,
+*/
+
+/*
+//jpj
+$cust_clr:#D67B63;
+$btn_bc: #dfa696;
+$text-inputclr:  #ddb3a7;
+//primary:    #ddb3a7,
+*/
+
+//Combination -1
+//RHR
+/*
+
+$cust_clr1:hsla(46, 88%, 40%, 0.918);
+$cust_clr:#1d1602ea;    
+$btn_bc: #f5e3a5ea;   
+$lbl_clr: #af8b15;
+$text-inputclr:  #f7e4a8;
+$card-bg:  #f8e8b1fb;
+$misc-bg: #ebeab8;
+$white-bg: white;
+$heading-bg:#f7e4a8;
+*/
+
+//Default - JPJ
+/*
+$cust_clr1:#ac4e33;
+$cust_clr:#d67b63; // #ac4e33 ;//#D67B63;
+$btn_bc: #f3ac9b;
+$lbl_clr: #F8EEE0;
+$text-inputclr:  #F8EEE0;
+$card-bg:  #F8EEE0;
+$misc-bg: #dedede;
+$white-bg: white;
+$heading-bg:#f7cabd;
+*/
+
+// vikram JEWELLERS
+ /*
+ $cust_clr1:#c89602;
+ $cust_clr:#b68903; // #ac4e33 ;//#D67B63;
+ $btn_bc: #e2c97c;
+ $lbl_clr: #f7e5af;
+ $text-inputclr:  #F8EEE0;
+ $card-bg:  #f7e5af;
+ $misc-bg: #f7eac3;
+ $white-bg: white;
+ $heading-bg:#f8eabf;
+ */
+
+// SRS JEWELLERS
+// $cust_clr1:#c89602;
+// $cust_clr:#b68903; // #ac4e33 ;//#D67B63;
+// $btn_bc: #e2c97c;
+// $lbl_clr: #f7e5af;
+// $text-inputclr:  #F8EEE0;
+// $card-bg:  #f7e5af;
+// $misc-bg: #f7eac3;
+// $white-bg: white;
+// $heading-bg:#f8eabf;
+
+// JPJ NEW JEWELLERS
+/*
+$cust_clr1:#0505ebc5;
+$cust_clr:#0000ff; // #ac4e33 ;//#D67B63;
+$btn_bc: #8c8cf8;
+$lbl_clr: #d5d5f3;
+$text-inputclr:  #eaeaf3;
+$card-bg:  #d5d5f3;
+$misc-bg: #d5d5f3;
+$white-bg: #d5d5f3;
+$heading-bg:#d5d5f3;
+*/
+
+//JPJ NEW JEWELLERS - final
+// $cust_clr1:#480528;
+// $cust_clr:#b70661; // #ac4e33 ;//#D67B63;
+// $btn_bc: #e6519e;
+// $lbl_clr: #eeb6d3;
+// $text-inputclr:  #eeb6d3;
+// $card-bg:  #eeb6d3;
+// $misc-bg: #eeb6d3;
+// $white-bg: #eeb6d3;
+// $heading-bg:#eeb6d3;
+
+/*
+//ATM 
+$cust_clr1:#cc1111;
+$cust_clr:#f15757; // #ac4e33 ;//#D67B63;
+$btn_bc: #f5f1f1;
+$lbl_clr: #f5f4f4;
+$text-inputclr:  #f8c8c8;
+$card-bg:  #f8c8c8;
+$misc-bg: #faf4fa;
+$white-bg: #f8c8c8;
+$heading-bg:#f8c8c8;
+*/
+
+
+
+
+
+//KGP 
+/*
+$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #f0acc8;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+*/
+//nama 
+/*
+$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #f0acc8;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+*/
+
+
+//Praveen 
+
+/*
+$cust_clr1:#420d23; //f1e757
+//$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #f0acc8;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+*/
+
+//Madhuri 
+/*
+$cust_clr1:#e69a0e; //f1e757
+$cust_clr:#a0971d; // #ac4e33 ;//#D67B63;
+$btn_bc: #b8acf0;
+$lbl_clr: #e4980b;
+$text-inputclr:  #ebb70c;
+$card-bg:  #e5edf3;
+$misc-bg: #ec9f0f;
+$white-bg: #ec9d0b;
+$heading-bg:#e2b10e;
+
+*/
+//vaarahi 
+/*
+$cust_clr1:#e69a0e; //f1e757
+$cust_clr:#a0971d; // #ac4e33 ;//#D67B63;
+$btn_bc: #b8acf0;
+$lbl_clr: #e4980b;
+$text-inputclr:  #ebb70c;
+$card-bg:  #e5edf3;
+$misc-bg: #ec9f0f;
+$white-bg: #ec9d0b;
+$heading-bg:#e2b10e;
+*/
+
+
+/*
+$cust_clr1:#6d4254; //f1e757
+$cust_clr:#f7192f; // #ac4e33 ;//#D67B63;
+$btn_bc: #f0acc8;
+$lbl_clr: #f0acc8;
+$text-inputclr:  #f0acc8;
+$card-bg:  #f0acc8;
+$misc-bg: #030303;
+$white-bg: #f8edf2;
+$heading-bg:#f0acc8;
+*/
+
+//verma
+/*
+$cust_clr1: #090e47;
+$cust_clr: #121a75;
+$btn_bc: #939ecf;
+$lbl_clr: #e7d2d2;
+$text-inputclr: #e4dcdc;
+$card-bg: #e4dcdc;
+$misc-bg: #e4dcdc;
+$white-bg: white;
+$heading-bg:#bdd6f7;
+*/
+
+//Sri Roopa
+/*
+$cust_clr1: #090e47;
+$cust_clr: #121a75;
+$btn_bc: #939ecf;
+$lbl_clr: #e7d2d2;
+$text-inputclr: #e4dcdc;
+$card-bg: #e4dcdc;
+$misc-bg: #e4dcdc;
+$white-bg: white;
+$heading-bg:#bdd6f7;
+*/
+/*
+$cust_clr1: #2d0e49;
+$cust_clr: #2d0e49;
+$btn_bc: #d2b2f0;
+$lbl_clr: #d2b2f0;
+$text-inputclr: #d2b2f0;
+$card-bg:  #dad2e2;
+$misc-bg: #dad2e2;
+$white-bg: white;
+*/
+//Rajalaxmi - Unity Building
+/*
+$cust_clr1: #611212ee;
+$cust_clr: #a72d2dee;
+$btn_bc: #dbb611e5;
+$lbl_clr: #d17c7c;
+$text-inputclr: #e4dcdc;
+$card-bg: #d89b9b;
+$misc-bg: #e4dcdc;
+$white-bg: white;
+$heading-bg:#f7cabd;
+*/
+
+//Rajalaxmi - JayaNagar Building
+/*
+$cust_clr1: #491010ee;
+$cust_clr: #813e3eee;
+$btn_bc: #dbb611e5;
+$lbl_clr: #813e3eee;
+$text-inputclr: #e4dcdc;
+$card-bg: #813e3eee;
+$misc-bg: #e4dcdc;
+$white-bg: white;
+$heading-bg:#a56d6dee;
+*/
+
+//sri vishwas
+/*
+$cust_clr1: #8f0909ee;
+$cust_clr: #5a0404ee;
+$btn_bc: #f1cf09e5;
+$lbl_clr: #8f0909ee;
+$text-inputclr: #f7d8d8;
+$card-bg: #f1cf09e5;
+$misc-bg: #fdc4c4;
+$white-bg: white;
+$heading-bg:#8f0909ee;
+*/
+
+//National
+/*
+$cust_clr1: #c50f0f;
+$cust_clr: #da3636;
+$btn_bc: #f1cb1ee5;
+$lbl_clr: #c29c9c;
+$text-inputclr: #e4dcdc;
+$card-bg: #e4dcdc;
+$misc-bg: #e4dcdc;
+$white-bg: white;
+$heading-bg:#f7cabd;
+*/
+
+
+//KANZ
+/*
+$cust_clr1: #c50f0f;
+$cust_clr: #da3636;
+$btn_bc: #f1cb1ee5;
+$lbl_clr: #c29c9c;
+$text-inputclr: #e4dcdc;
+$card-bg: #e4dcdc;
+$misc-bg: #e4dcdc;
+$white-bg: white;
+$heading-bg:#f7cabd;
+*/
+
+
+
+//Uday Jewellers Kundapura
+/*
+$cust_clr1: #8f0909ee;
+$cust_clr: #5a0404ee;
+$btn_bc: #ffbc05;
+$lbl_clr: #8f0909ee;
+$text-inputclr: #f7d8d8;
+$card-bg: #ffbc05;
+$misc-bg: #fdc4c4;
+$white-bg: white;
+$heading-bg:#8f0909ee;
+
+*/
+
+
+
+//SSJP
+/*
+$cust_clr1: #c20c15;
+$cust_clr: #f1323c;
+$btn_bc: #ffbb00;
+$lbl_clr: #f7f794;
+$text-inputclr: #f7f794;
+$card-bg: #ffbb00;
+$misc-bg: #f7f794;
+$white-bg: white;
+$heading-bg:#f7f794;
+*/
+
+
+//primary:    #f0e0ad,
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+//@import "ionic.theme.dark";
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

@@ -1,0 +1,204 @@
+<!--
+  Generated template for the JmshomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="navigation">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center><img alt="logo" id="header_logo" height="50" width="50" float-left src="assets/imgs/jms1.png">
+     <div class="aligntextcenter"> {{data.loggedInUserObj['store']['storeName']}} </div>   </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+    
+  <div class="image-slide">
+    <ion-slides pager="true">
+        <ion-slide>
+            <img src="{{slide1}}" alt="{{slide1}}" class="full-width-image">
+        </ion-slide>
+        <ion-slide>
+            <img src="{{slide2}}" class="full-width-image">
+        </ion-slide>
+        <ion-slide>
+            <img src="{{slide3}}" class="full-width-image">
+        </ion-slide>
+        <ion-slide>
+            <img src="{{slide4}}" class="full-width-image">
+        </ion-slide>
+        <ion-slide>
+            <img src="{{slide5}}" class="full-width-image">
+        </ion-slide>
+    </ion-slides>
+</div>
+
+
+
+
+
+  <div class="container">
+    <ion-list *ngFor="let each of rateslist" no-lines no-padding no-margin class="custom-list">
+      <ion-label *ngIf="each.metal == 'GOLD'" class="custom-label-gold">
+        <div class="box">
+          <span class="label-text colorbgtxt">Purity: {{each.purity}}</span>
+          <span class="custom-span-gold colorbgtxt">{{each.metal}} Rate</span>
+          <span class="rate-text colorbgtxt">Rs.{{each.rate}}/-</span>
+        </div>
+      </ion-label>
+    
+      <ion-label *ngIf="each.metal != 'GOLD'" class="custom-label-other">
+        <div class="box">
+          <span class="label-text colorbgtxt">Purity: {{each.purity}}</span>
+          <span class="custom-span-other colorbgtxt">{{each.metal}} Rate</span>
+          <span class="rate-text colorbgtxt">Rs.{{each.rate}}/-</span>
+        </div>
+      </ion-label> 
+    </ion-list>
+  </div> 
+  
+  
+  
+  
+
+  <ion-grid *ngIf="data.userLoginType=='agent'">
+    <ion-row>
+      <ion-card class="cardbg">
+        <ion-card-header   color="black" style="text-align: center;">
+          {{metrics.COLLECTIONS}}
+        </ion-card-header>
+        <ion-card-content class="card-class-full-1" style="text-align: center;">
+          Today Collection
+        </ion-card-content>
+      </ion-card>
+
+    </ion-row>
+  </ion-grid>
+
+
+
+
+  <ion-grid *ngIf="data.userLoginType=='customer'">
+    <!-- <div> -->
+    <ion-card class="card-class-full-1">
+      <!-- <ion-card-content align="center" style="font-size:16px"> -->
+      <ion-card-content text-wrap class="card-class-full-1" text-center>
+
+        Welcome {{data.loggedInUserObj.name}} To {{data.loggedInUserObj['store']['storeName']}}
+
+      </ion-card-content>
+
+      <!-- </ion-card-content> -->
+    </ion-card>
+    <!-- </div> -->
+  </ion-grid>
+
+
+
+
+
+
+
+
+  <div class="item no-padding">
+    <ion-row class="row-no-padding">
+      <ion-col>
+        <!-- <ion-card class="card-class-home" *ngIf="data.userLoginType=='customer'" (click)="goToMyChits()">
+          <ion-icon name="briefcase" class="icon-card"></ion-icon>
+          <ion-label class="label-card">MY PLANS</ion-label>
+        </ion-card> -->
+
+        <ion-card class="card-class-home" *ngIf="data.userLoginType=='customer'" (click)="goToMyChits()">
+          <img [src]="myplan" alt="Briefcase Icon" class="icon-card colorsize center-image" style="width: 90px; height: 90px;">
+          <ion-label class="label-card">MY PLANS</ion-label>
+        </ion-card>
+        
+        <ion-card class="card-class-home" *ngIf="data.userLoginType !== 'customer'" (click)="goToMyChits()">
+          <!-- Use inline style to set the width and height of the image -->
+          <img [src]="pay" alt="Briefcase Icon" class="icon-card colorsize center-image" style="width: 90px; height: 90px;">  
+          <ion-label class="label-card">PAYMENTS</ion-label>
+        </ion-card>
+        
+
+        <!-- <ion-card class="card-class-home" *ngIf="data.userLoginType!=='customer'" (click)="goToMyChits()">
+          <img [src]="iconUrl" alt="Briefcase Icon" class="icon-card">
+          <ion-label class="label-card">MY PLANS</ion-label>
+        </ion-card> -->
+      </ion-col>
+      <ion-col>
+        <ion-card class="card-class-home" (click)="dojoinscheme()">
+          <img [src]="plan" alt="Briefcase Icon" class="icon-card center-image" style="width: 90px; height: 90px;">
+          <ion-label class="label-card">NEW PLAN</ion-label>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row class="row-no-padding">
+      <ion-col>
+        <ion-card class="card-class-home" (click)="offerspage()">
+          <!-- <ion-icon name="pricetag" class="icon-card"></ion-icon> -->
+          <img [src]="offer" alt="Briefcase Icon" class="icon-card center-image" style="width: 90px; height: 90px;">
+          <ion-label class="label-card">OFFERS</ion-label>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="card-class-home" (click)="Benifitspage()">
+          <!-- <ion-icon name="ribbon" class="icon-card"></ion-icon> -->
+          <img [src]="benifits" alt="Briefcase Icon" class="icon-card center-image" style="width: 90px; height: 90px;">
+          <ion-label class="label-card">BENEFITS</ion-label>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row class="row-no-padding">
+      <ion-col>
+        <ion-card class="card-class-home" (click)="howtouse()">
+          <!-- <ion-icon name="help-circle" class="icon-card"></ion -icon> -->
+          <img [src]="guide" alt="Briefcase Icon" class="icon-card center-image" style="width: 90px; height: 90px;">
+          <ion-label class="label-card">HOW TO USE</ion-label>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="card-class-home" (click)="faq()">
+          <!-- <ion-icon name="help-buoy" class="icon-card"></ion-icon> -->
+          <img [src]="faqs" alt="Briefcase Icon" class="icon-card center-image" style="width: 90px; height: 90px;">
+          <ion-label class="label-card">FAQ</ion-label>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+  
+  
+
+  <div class="follow-us">
+    <button class="follow-us-btn" (click)="followUs()">
+      Follow Us On
+    </button>
+    <div class="social-icons">
+      <button class="social-icon" (click)="fb()">
+        <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon>
+      </button>
+      <button class="social-icon" (click)="twitter()">
+        <ion-icon ios="logo-twitter" md="logo-twitter"></ion-icon>
+      </button>
+      <button class="social-icon" (click)="yt()">
+        <ion-icon ios="logo-youtube" md="logo-youtube"></ion-icon>
+      </button>
+      <button class="social-icon" (click)="insta()">
+        <ion-icon ios="logo-instagram" md="logo-instagram"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+
+</ion-content>
+<ion-grid *ngIf="data.userLoginType=='agent'">
+
+</ion-grid>

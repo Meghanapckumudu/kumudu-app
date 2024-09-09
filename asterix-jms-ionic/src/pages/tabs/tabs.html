@@ -1,0 +1,11 @@
+<ion-tabs [selectedIndex]="myIndex" *ngIf="data.userLoginType=='agent'" class="custom-tabs">
+  <ion-tab [root]="homeRoot" tabTitle="Home" tabIcon="home"></ion-tab>
+  <ion-tab [root]="searchRoot" tabTitle="Search/Payment" tabIcon="search"></ion-tab>
+  <ion-tab [root]="joinChitRoot" tabTitle="Join Plan" tabIcon="person-add"></ion-tab>
+  <ion-tab [root]="reportsRoot" tabTitle="Reports" tabIcon="pie"></ion-tab>
+</ion-tabs>
+<ion-tabs  [selectedIndex]="myIndex" *ngIf="data.userLoginType=='customer'" class="custom-tabs">
+  <ion-tab [root]="homeRoot" tabTitle="Home" tabIcon="home"></ion-tab>
+  <ion-tab [root]="searchRoot" tabTitle="My Plans" tabIcon="search"></ion-tab>
+  <ion-tab [root]="joinChitRoot" tabTitle="Start Plan" tabIcon="person-add"></ion-tab>
+</ion-tabs>

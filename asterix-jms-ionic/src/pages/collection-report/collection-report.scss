@@ -1,0 +1,81 @@
+page-collection-report {
+
+.card-ios, .card-md, .card-wp {
+	margin:0px;
+	box-shadow:none;
+	background:$misc-bg;
+	border-radius: 0;
+	width:100%;
+	}
+
+	
+.card-header-ios, .card-header-md, .card-header-wp{
+	text-align: center;
+	color: $optcolor;	
+	// background:white;
+	background: linear-gradient(to right, #ffffff, #f0f0f0); /* Gradient colors */
+	box-shadow: inset 8px -7px 8px 5px rgba(0, 0, 0, 0.1)
+
+
+}
+
+.card-content-ios, .card-content-md, .card-content-wp {
+    padding: 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+	background: $misc-bg;
+	border-bottom:1px solid $text-inputclr;
+}
+
+.card-content .item-button {    
+    font-size: 1.9rem;
+}
+
+.item-md.item-block .item-inner,.item-wp.item-block .item-inner   {
+    // border-bottom: 1px solid $text-inputclr;
+}
+
+.item-ios.item-block .item-inner {
+    // border-bottom: 0.55px solid $text-inputclr;
+}
+
+.item-button {
+    padding: 0 0.6em;
+    height: 25px;
+    font-size: 2rem !important;
+	color:$btn_bc;
+}
+
+ion-label[fixed], .item-datetime .label{
+	color:$btn_bc !important;
+	font-size: 1.4rem;
+}
+
+.text-input-wp {
+    margin: 13px 8px;
+    padding: 0 8px;
+    width: calc(100% - 8px - 8px);
+    border: 0px solid rgba(0, 0, 0, 0.5);
+    line-height: 3rem;
+	color: $cust_clr1 //#D67B63;
+}
+
+.datetime-wp .datetime-text{
+	border: 0px solid rgba(0, 0, 0, 0.5);
+	color:$cust_clr1;
+}
+
+.datetime-text{
+	color:$cust_clr1;
+}
+
+.datetime-wp{
+	padding:0px;
+}
+
+
+.text-input-ios, .text-input-md, .text-input-wp{
+	color:$cust_clr1;
+	}
+
+}

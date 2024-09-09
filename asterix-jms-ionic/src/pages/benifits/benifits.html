@@ -1,0 +1,39 @@
+<!--
+  Generated template for the BenifitsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="navigation">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Scheme Benifits</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-item (click)="DisplayPdf_new(eachGroup.scheme_name)" *ngFor="let eachGroup of distinctgroups">
+   <!--  <div> 
+   <button ion-button icon-only clear (click)='displaypdfurl()'>
+     pdf from url
+    </button>
+   </div> -->
+
+    <div>
+      <ion-card>
+        <ion-card-header>
+          <img src="assets/imgs/pdf.png" />
+        </ion-card-header> 
+        <ion-card-content>
+          <h2> Scheme - {{eachGroup.scheme_name}} - Benifits </h2>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,159 @@
+
+<ion-header>
+
+  <ion-navbar color="navigation">
+    <ion-title>Join New Plan</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list>
+ 
+
+
+
+    <ion-grid>
+      <ion-row class="TextColor">
+        <ion-col col-6>
+          <ion-item>
+            <ion-label color="primary" stacked>Group</ion-label>
+            <ion-input class="custom-input" color="primary" type="text" value="" [(ngModel)]="scheme.code" [readonly]="isReadonly">
+            </ion-input>
+
+          </ion-item>
+        </ion-col>
+
+        <ion-col col-6>
+          <ion-item>
+            <ion-label color="primary" stacked> {{this.isAmtOrGold}} </ion-label>
+            <ion-input class="custom-input"  type="text" value="" [(ngModel)]="scheme.AMOUNT" [readonly]="isAmountReadOnly"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-10>
+          <ion-item>
+            <ion-label color="primary" stacked>Installments</ion-label>
+            <ion-input class="custom-input" type="text" value="" [(ngModel)]="scheme.no_inst" [readonly]="isReadonly"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button default class="btn-orange" clear end *ngIf="data.userLoginType=='agent'"
+            (click)="GetLocation()">
+            <ion-icon name="pin" (click)="GetLocation()"> </ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+
+
+    <ion-item>
+      <ion-input  class="custom-input123" type="number" maxlength="10" value="" [(ngModel)]="scheme.mobile" placeholder="Mobile"
+        [readonly]="data.userLoginType=='customer'" #h (keyup.enter)="setFocus(a)"  (ionBlur) ="GetMemberAddressByMobile()" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="custom-input123" type="text" value="" [(ngModel)]="scheme.name" placeholder="Name" #a (keyup.enter)="setFocus(b)"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="custom-input123" type="text" value="" [(ngModel)]="scheme.address1" placeholder="Address1" #b (keyup.enter)="setFocus(c)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input class="custom-input123" type="text" value="" [(ngModel)]="scheme.address2" placeholder="Address2" #c (keyup.enter)="setFocus(d)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input class="custom-input123" type="text" value="" [(ngModel)]="scheme.address3" placeholder="Address3" #d (keyup.enter)="setFocus(f)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input class="custom-input123" type="text" value="" [(ngModel)]="scheme.city" placeholder="City" #f (keyup.enter)="setFocus(g)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input class="custom-input123" type="number" value="" [(ngModel)]="scheme.pincode" placeholder="Pincode" maxlength="6" #g (keyup.enter)="setFocus(i)">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="custom-input123" type="text" value="" [(ngModel)]="scheme.email" placeholder="Email" [readonly]="data.userLoginType=='customer'" #i
+        (keyup.enter)="setFocus(j)">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Date of Birth</ion-label>
+      <ion-datetime class="custom-input123" displayFormat="MMM DD YYYY" [(ngModel)]="scheme.dob" ></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Anniversary</ion-label>
+      <ion-datetime class="custom-input123" displayFormat="MMM DD YYYY" [(ngModel)]="scheme.anniversary"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-input  class="custom-input123" value="" [(ngModel)]="scheme.panno" placeholder="Pan" maxlength="10" >
+      </ion-input>
+    </ion-item>
+
+  
+
+    <ion-item text-wrap no-lines>
+      <ion-row>
+        <ion-col col-6 no-padding no-margin>
+          <ion-item no-padding no-margin no-lines *ngIf="scheme.gold_scheme=='1' || scheme.gold_scheme=='2'">
+            <ion-label stacked>Metal Conversion</ion-label>
+            <ion-checkbox [(ngModel)]="scheme.gold_convyn" *ngIf="scheme.type =='G' || this.data.loggedInUserObj['branch'] == 'RHR'" disabled="true">Metal Conversion
+            </ion-checkbox>
+            <ion-checkbox [(ngModel)]="scheme.gold_convyn" *ngIf="scheme.type !='G' && this.data.loggedInUserObj['branch'] != 'RHR' " disabled="false">Metal Conversion
+            </ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6 no-padding no-margin>
+          <ion-item text-wrap *ngIf="scheme.gold_convyn">
+            <ion-label stacked>Select Metal</ion-label>
+            <ion-select [(ngModel)]="scheme.metal_id">
+              <ion-option value="0" *ngIf="!scheme.gold_convyn">None</ion-option>
+              <ion-option value="1">Gold</ion-option>
+              <ion-option value="2" *ngIf="this.data.loggedInUserObj['branch'] != 'RHR'">Silver</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item text-wrap  no-padding no-margin no-lines>
+      <ion-row>
+        <ion-col col-1 no-padding no-margin> </ion-col>
+        <ion-col col-1 no-padding no-margin>
+          <ion-item no-padding no-margin no-lines>
+            <ion-checkbox color="primary" [(ngModel)]="scheme.custAccept" disabled="false"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+        <ion-col col-10 no-padding no-margin>
+          <ion-item no-padding no-margin no-lines>
+           
+
+             <button ion-button no-padding no-margin clear end><span> I Agree to </span></button>
+            <button ion-button no-padding no-margin clear end (click)="openTermsNew()">
+              Terms and Conditions
+            </button> 
+              <button ion-button no-padding no-margin clear end> <span> And</span> </button>
+              <button ion-button clear end (click)="openPrivacyPolicyNew()">
+              <span>Privacy Policy</span>
+            </button>
+          </ion-item>
+
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <ion-item text-center>
+      <button ion-button default class="btn-orange" (click)=joinChit()>Join</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

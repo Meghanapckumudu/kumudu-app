@@ -1,0 +1,62 @@
+/* Styling for the Collection Summary page */
+.collection-summary-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.summary-grid {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.summary-header {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.summary-header-cell {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.summary-row {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.summary-data {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.summary-total {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.summary-total-cell {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}

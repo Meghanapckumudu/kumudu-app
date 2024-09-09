@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar color="navigation">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title> {{data.loggedInUserObj['store']['storeName']}} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+  <div>
+<ion-list>
+  <ion-grid>
+    <div class="page-title">Member Search</div>
+      <ion-row>
+        <ion-col col-4>
+        <ion-item>
+            <ion-label stacked>Group</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="Mupdate.mgroup" ></ion-input>
+        </ion-item>
+        </ion-col>
+  
+        <ion-col col-4>
+           <ion-item>
+              <ion-label stacked>Member No</ion-label>
+              <ion-input type="text" value="" [(ngModel)]="Mupdate.memberNo" ></ion-input>
+          </ion-item>
+        </ion-col>
+ 
+        <ion-col col-4>
+          <button ion-button class="custom-button33" (click)="GetMembers()">
+            <span>Get Details</span>
+        </button>
+        
+        </ion-col>
+      </ion-row>
+      <div class="page-title">Member Details</div>
+      <ion-row>
+        <ion-item class="custom-input-shadow11">
+          <ion-label stacked>Name</ion-label>  
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.Name"></ion-input>/*readonly=true*/
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label stacked>Address Line 1</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.address1"></ion-input>
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label stacked>Address Line 2</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.address2"></ion-input>
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label stacked>Address Line 3</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.address3"></ion-input>
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label stacked>City</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.place"></ion-input>
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label stacked>Pincode</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.pincode"></ion-input>
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label stacked>Phone</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.phone"></ion-input>
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label stacked>Mobile</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.mobile" ></ion-input>
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label stacked>Email</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.email"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+          <button ion-button class="custom-button" (click)="updateMembers()">
+              <span >Update Members</span>
+           </button>
+      </ion-row>
+  </ion-grid>
+</ion-list>
+</div>
+  <!-- {{payResponse}} -->
+
+</ion-content>

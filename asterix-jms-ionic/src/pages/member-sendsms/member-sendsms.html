@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-navbar color="navigation">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title> {{data.loggedInUserObj['store']['storeName']}} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+  <div>
+    <ion-list>
+      <ion-grid>
+        <div class="page-title">Send SMS to Member</div>
+        <ion-row  no-padding>
+          <ion-col col-1 no-padding ></ion-col>
+          <ion-col col-3 no-padding>
+            <ion-item  no-padding>
+              <ion-label color="cement" stacked>Group</ion-label>
+              <ion-input type="text" value="" [(ngModel)]="Mupdate.mgroup"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-1 no-padding ></ion-col>
+          <ion-col col-3 no-padding >
+            <ion-item no-padding>
+              <ion-label color="cement"  stacked>Member No</ion-label>
+              <ion-input type="text" value="" [(ngModel)]="Mupdate.memberNo"></ion-input>
+            </ion-item>
+          </ion-col>
+
+          <ion-col col-4  no-padding >
+            <ion-label color="cement"  stacked></ion-label>
+            <button ion-button class="custom-button33" (click)="GetMembers()">
+              Get Details </button>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-item class="custom-input-shadow11">
+          <ion-label color="cement"  stacked>Name</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.Name"></ion-input>
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label color="cement"  stacked>Address Line 1</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.address1"></ion-input>
+        </ion-item>
+        <ion-item class="custom-input-shadow11">
+          <ion-label color="cement" stacked>Address Line 2</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="Mupdate.address2"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col col-6>
+            <ion-item >
+              <ion-label color="cement" stacked>Address Line 3</ion-label>
+              <ion-input type="text" value="" [(ngModel)]="Mupdate.address3"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+            <ion-item>
+              <ion-label color="cement" stacked>City</ion-label>
+              <ion-input type="text" value="" [(ngModel)]="Mupdate.place"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-4>
+            <ion-item >
+              <ion-label color="cement" stacked>Pincode</ion-label>
+              <ion-input type="text" value="" [(ngModel)]="Mupdate.pincode"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label color="cement"  stacked>Phone</ion-label>
+              <ion-input type="text" value="" [(ngModel)]="Mupdate.phone"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-4>
+            <ion-item>
+              <ion-label color="cement"  stacked>Mobile</ion-label>
+              <ion-input type="text" value="" [(ngModel)]="Mupdate.mobile"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-list radio-group [(ngModel)]="Mupdate.smstype" (click)="onChange()">
+            <ion-col col-6>
+              <ion-item class="custom-input-shadow11">
+                <ion-label color="cement"  stacked>Member Not Available </ion-label>
+                <ion-radio value="MNA" (click)="onChange_MNA()"></ion-radio>
+              </ion-item>
+            </ion-col>
+            <ion-col col-6> 
+              <ion-item class="custom-input-shadow11">
+                <ion-label color="cement"  stacked>Payment Scheduled For Next </ion-label>
+                <ion-radio value="MXTSP" (click)="onChange()"></ion-radio>
+              </ion-item>
+            </ion-col>
+          </ion-list>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+            <ion-item *ngIf="visability">
+              <ion-label color="primary" stacked>Next Date For Collection</ion-label>
+              <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="Mupdate.nextdate"></ion-datetime>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6>
+          </ion-col>
+      
+        </ion-row>
+        <ion-row>
+          <ion-col>
+           
+              <button ion-button class="custom-button33" (click)="sendsms()">
+                Send SMS
+              </button>
+       
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+  <!-- {{payResponse}} -->
+
+</ion-content>

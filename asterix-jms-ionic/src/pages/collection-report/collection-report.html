@@ -1,0 +1,57 @@
+<!--
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Collection Report</ion-title>
+  </ion-navbar>
+</ion-header>
+-->
+<ion-header>
+
+  <ion-navbar color="navigation">
+    <ion-title>Collection Summary</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <ion-card>
+
+    <ion-card-header>
+      <!--<ion-icon name="funnel" float-right></ion-icon>-->
+      Total : Rs. {{amountCollected}}/-
+    </ion-card-header>
+
+
+
+  </ion-card>
+  <ion-item *ngFor="let each of ledger">
+    <h2>{{each.name}}</h2>
+    <p>{{each.mobile}} |
+      <span class="text-red">{{each.mcode}}</span>
+    </p>
+    <p>{{each.transaction_dt}} |
+      <span class="text-red">{{each.mcode}}</span>
+    </p>
+    <p>
+      <span class="text-red">{{each.mgroup}}-{{each.member_no}}</span>
+    </p>
+    <p *ngIf="each.g_balance?.length>0">{{each.g_balance}}gms
+    </p>
+    Payment Mode: {{each.mode}}
+    <br> Voucher No: {{each.voucher_no}}
+    <p>
+      <span class="text-red">Rs. {{each.amount_collected}}/-</span>
+    </p>
+
+    <!--  <button ion-button clear item-end (click)="print(each)">
+      <ion-icon name="print"></ion-icon>
+    </button> -->
+  </ion-item>
+</ion-content>

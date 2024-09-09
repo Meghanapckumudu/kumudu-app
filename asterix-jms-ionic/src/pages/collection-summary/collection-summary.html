@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="navigation">
+    <ion-title>Collection Summary</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="collection-summary-container">
+    <h2 class="page-title">Field Collection</h2>
+    <ion-grid class="summary-grid">
+      <ion-row class="summary-header">
+        <ion-col col-4 class="summary-header-cell">Payment Mode</ion-col>
+        <ion-col col-4 class="summary-header-cell">Count</ion-col>
+        <ion-col col-4 class="summary-header-cell">Amount</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let each of summary" class="summary-row">
+        <ion-col col-4 class="summary-data">{{ each.mode }}</ion-col>
+        <ion-col col-4 class="summary-data">{{ each.c }}</ion-col>
+        <ion-col col-4 class="summary-data">{{ each.a }}</ion-col>
+      </ion-row>
+      <ion-row class="summary-total">
+        <ion-col col-4 class="summary-total-cell">Total</ion-col>
+        <ion-col col-4 class="summary-total-cell">:</ion-col>
+        <ion-col col-4 class="summary-total-cell">{{ total }}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

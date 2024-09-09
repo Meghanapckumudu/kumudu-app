@@ -1,0 +1,29 @@
+page-join-chit-success {
+    .success{font-size:150px;text-align:center; margin:40px 0px;}
+
+    .success-text {
+        color: #28a745; /* Green color for success */
+        font-size: 16px; /* Adjust font size as needed */
+        font-weight: bold; /* Make text bold */
+        text-align: center; /* Center align text */
+        margin-bottom: 10px; /* Add some bottom margin for spacing */
+        display: block; /* Ensure it behaves as a block element */
+        // border: 2px solid #28a745; /* Add a green border */
+        // border-radius: 8px; /* Add some border radius for rounded corners */
+        padding: 10px; /* Add padding for spacing inside the box */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        /* Add any other styles you may need */
+      }
+      
+    
+    .label-ios, .label-md, .label-wp {
+        margin: 13px 0px 13px 0;
+        text-align: center;
+    }
+    
+    .item-md.item-block .item-inner, .item-wp.item-block .item-inner, .item-ios.item-block .item-inner {
+        padding-right: 0px;
+        // border-bottom: 0px solid $misc-bg;
+    }
+    
+}

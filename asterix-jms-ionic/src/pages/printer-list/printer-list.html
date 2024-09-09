@@ -1,0 +1,27 @@
+<!--
+  Generated template for the PrinterListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar #navbar>
+    <ion-title>Select Printer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="devices?.length==0">
+    <h2>
+      No Connected Bluetooth devices found.
+    </h2>
+    {{data.printMessage}}
+  </div>
+  <ion-card *ngFor="let eachDevice of devices" (click)="selectPrinter(eachDevice)">
+    <ion-card-content>{{eachDevice.name}}</ion-card-content>
+  </ion-card>
+  <button full ion-button (click)="dismiss()">Close</button>
+</ion-content>

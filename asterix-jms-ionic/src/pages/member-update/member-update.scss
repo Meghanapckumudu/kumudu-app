@@ -1,0 +1,49 @@
+page-member-update {
+	.card-ios,
+	.card-md,
+	.card-wp {
+		margin: 0px;
+		box-shadow: none;
+		border-radius: 10px;
+		width: 100%;
+		background: $lbl_clr; // #f8f8f8;
+		border: 1px solid $misc-bg;
+	}
+
+	.card-header-ios,
+	.card-header-md,
+	.card-header-wp {
+		color: $cust_clr1; // #D67B63;
+		text-align: left;
+		font-size: 30px;
+		padding: 8px 16px;
+	}
+
+	.card-content-ios,
+	.card-content-md,
+	.card-content-wp {
+		padding-top: 10px !important;
+		font-size: 1.4rem;
+		line-height: 1.5;
+		background: $lbl_clr; // #fff;
+		border-top: 1px solid $lbl_clr; // #F8EEE0;
+	}
+
+	.button-outline-ios,
+	.button-outline-md,
+	.button-outline-wp {
+		border: 1px solid $lbl_clr !important;
+		color: $cust_clr1; //#D67B63;
+		border-radius: 10px !important;
+	}
+}
+
+
+.custom-button {
+    height: 36px !important;
+    width: 100%;
+    background-color: $optcolor;
+    color: #fff;
+    // border-radius: 5px;
+    margin: 10px 10px 10px 16px !important; /* Adjust the value as needed */
+}

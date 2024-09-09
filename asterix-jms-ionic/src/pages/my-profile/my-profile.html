@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="navigation">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Reports</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content no-padding>
+  <ion-list>
+
+
+    <ion-item class="custom-input-shadow11">
+      <ion-label stacked color="red">Date From</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="startDate"></ion-datetime>
+    </ion-item>
+    
+
+
+    <!-- <ion-item>
+      <ion-label stacked>Date To</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="endDate"></ion-datetime>
+    </ion-item> -->
+
+    <ion-item text-center>
+      <button ion-button default class="btn-orange" (click)="goToCollectionSummaryPage()">Summary</button>
+      <button ion-button default class="btn-orange" (click)="goToCollectionDetail()">Detail</button>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

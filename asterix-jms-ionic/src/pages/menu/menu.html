@@ -1,0 +1,75 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list *ngIf="data.userLoginType=='customer'">
+      <button class="menu-item" (click)="goToHome()">
+        <ion-icon slot="start" name="home"></ion-icon>
+        Home
+      </button>
+      <button class="menu-item" (click)="goToJoinChit()">
+        <ion-icon slot="start" name="search"></ion-icon>
+        Enroll New Plan
+      </button>
+      <button class="menu-item" (click)="goToMyChits()">
+        <ion-icon slot="start" name="person-add"></ion-icon>
+        My Plans
+      </button>
+      <!-- <button class="menu-item" (click)="goToSettingPage()">
+        <ion-icon slot="start" name="cog"></ion-icon>
+        Settings
+      </button> -->
+      <button class="menu-item" (click)="goToLoginPage()">
+        <ion-icon slot="start" [name]="logoutIconClass()" [color]="logoutClass()"></ion-icon>
+        Log out
+      </button>
+    </ion-list>
+
+    <ion-list *ngIf="data.userLoginType=='agent'">
+      <button class="menu-item" (click)="goToHome()">
+        <ion-icon slot="start" name="home"></ion-icon>
+        Home
+      </button>
+      <button class="menu-item" (click)="goToJoinChit()">
+        <ion-icon slot="start" name="search"></ion-icon>
+        Enroll New Plan
+      </button>
+      <button class="menu-item" (click)="goToMyChits()">
+        <ion-icon slot="start" name="person-add"></ion-icon>
+        My Plans
+      </button>
+      <button class="menu-item" (click)="goToReport()">
+        <ion-icon slot="start" name="pie"></ion-icon>
+        Reports
+      </button>
+      <!-- <button class="menu-item" (click)="goToSettingPage()">
+        <ion-icon slot="start" name="cog"></ion-icon>
+        Settings
+      </button> -->
+      <button class="menu-item" (click)="goToUpdateMember()">
+        <ion-icon slot="start" name="paper"></ion-icon>
+        Update Members Info
+      </button>
+      <button class="menu-item" (click)="goToSendSmsToMember()">
+        <ion-icon slot="start" name="text"></ion-icon>
+        SMS Members
+      </button>
+      <button class="menu-item" (click)="goToLoginPage()">
+        <ion-icon slot="start" [name]="logoutIconClass()" [color]="logoutClass()"></ion-icon>
+        Log out
+      </button>
+    </ion-list>
+
+    <ion-label text-center class="version">
+      <p>Version 6.0.8[{{this.menuStoreId}}]</p>
+      <p>Made by Kumudu</p>
+       <!-- <p class="mad">Parent Company (Madhuri Silver Palace)</p>  -->
+    </ion-label>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="navigation">
+    <ion-title>How To Use?</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-card class="card-class-helpytbe">
+      <img class="image-card-helpytbe" src="assets/imgs/youtube1.png" (click)="watchyoutubeHelp()" />
+    </ion-card>
+  </div>
+
+  <ion-card class="card-class-full-help">
+    <div class="qa-box">
+      <div class="question">Getting Started</div>
+      
+        <h5>How To Register App?</h5>
+        <p>In Login Page - Select <b>Sign Up</b> Option And Fill All Mandatory Details in Registration Screen And
+          Click on <b>Register</b> Button.</p>
+     
+    </div>
+
+    <div class="qa-box">
+      <div class="question">How to Join New Savings Group?</div>
+     
+        <h5>How to Join New Savings Group?</h5>
+        <p>Select <b>Enroll Plan</b> From Menu Bar Or <b>Join Plan</b> Icon From Bottom Navigation Bar.</p>
+        <p>Select Any Suitable Saving Plans from Available Saving Groups List, Read Details Regarding New Joining Group in
+          Details And Benefits Section.</p>
+        <p>Fill All Mandatory Details & Click on <b>Join</b> Button.</p>
+        <p>Now You have Successfully Registered to Savings Plan And <b>Member Number</b> Will Be Displayed on the
+          Screen.</p>
+        <p>Next, Payment Screen Will Be Displayed. Here you can Pay by online Payment Mode, either By Cards / Net Banking /
+          UPI.</p>
+      </div>
+   
+
+    <div class="qa-box">
+      <div class="question">How To Pay Installments Of Existing Savings Plan through the App?</div>
+      
+        <h5>How To Pay Installments Of Existing Savings Plan through the App?</h5>
+        <p>All Joined Saving Plans Details Will be Listed under <b>My Saving Plans</b> Page. Select Your Plan. The Payment
+          Screen will be Displayed. Specify / Verify Installment Amount. Select Payment Mode And Click on Pay Button.</p>
+        <p>After successful Online Payment, Transaction ID And Receipt Number Will be Displayed on Screen.</p>
+      </div>
+   
+
+    <div class="qa-box">
+      <div class="question">How To View All the Payment Details?</div>
+      
+        <h5>How To View All the Payment Details?</h5>
+        <p>Select Your Savings Plan Under My Plans Page And In that Ledger Option you Can View All Paid Installment Details</p>
+      </div>
+  
+  </ion-card>
+
+  <div *ngIf="this.data.loggedInUserObj['branch'] == 'RHR'">
+    <div class="note">
+      <h5>Note:</h5>
+      <p>Please submit Aadhaar card after registration to our shop whatsapp number.</p>
+      <p>If your advance amount crossed 2 lacs PAN card is compulsory for billing.</p>
+    </div>
+  </div>
+</ion-content>

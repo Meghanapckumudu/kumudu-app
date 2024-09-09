@@ -1,0 +1,30 @@
+.faq-list {
+  padding: 10px;
+}
+
+.faq-item {
+  // border-bottom: 1px solid #ddd;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.question {
+  font-weight: bold;
+}
+
+.answer {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #f9f9f9;
+  display: none;
+}
+
+.answer.show {
+  display: block;
+}
+
+.expand-indicator {
+  float: right;
+  font-weight: bold;
+}

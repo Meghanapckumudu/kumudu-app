@@ -1,0 +1,88 @@
+.page-join-chit {
+    --ion-color-primary: #8a5169; /* Define primary color */
+
+    /* Styling for text color */
+    color: var(--ion-color-primary);
+
+    /* Styling for background color */
+    background-color: #ffffff;
+
+    /* Styling for buttons */
+    --ion-color-button-background: #f0a500; /* Button background color */
+    --ion-color-button-text: #ffffff; /* Button text color */
+}
+
+/* Styling for each input item */
+.page-join-chit ion-item {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Styling for buttons */
+.page-join-chit .btn-orange {
+    background-color: var(--ion-color-button-background);
+    color: var(--ion-color-button-text);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styling for custom input */
+.page-join-chit ion-item.custom-input ion-input {
+    --placeholder-color: #999999;
+    font-size: 1rem;
+    padding: 10px;
+    width: calc(100% - 20px);
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Styling for labels */
+.page-join-chit ion-label[stacked],
+.page-join-chit .item-datetime .label,
+.page-join-chit .label-ios[floating],
+.page-join-chit .label-md[floating],
+.page-join-chit .label-wp[floating] {
+    color: var(--ion-color-primary);
+    font-size: 1rem;
+}
+
+/* Styling for checkboxes */
+.page-join-chit .item-ios ion-checkbox,
+.page-join-chit .item-md ion-checkbox,
+.page-join-chit .item-wp ion-checkbox {
+    --background: var(--ion-color-primary);
+}
+
+/* Styling for terms and conditions */
+.page-join-chit .terms-conditions {
+    margin-top: 20px;
+}
+
+.page-join-chit .terms-conditions button {
+    color: var(--ion-color-primary);
+    font-size: 0.9rem;
+    text-decoration: underline;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.page-join-chit .terms-conditions button:hover {
+    color: #8a5169;
+}
+
+
+.custom-input123{
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #ccc;
+		
+}

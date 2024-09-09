@@ -1,0 +1,49 @@
+<!--
+  Generated template for the CustomerSearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="navigation">
+    <ion-title>Customers</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="searchTerm" (search)="searchByKeyword($event)" placeholder="Enter Customer Mobile">
+  </ion-searchbar>
+
+  <ion-item *ngFor="let each of ledger">
+    <h2>{{each.voucher_no}}</h2>
+    <ion-row>
+      <ion-col col-6>
+        <p>{{each.voucher_date}}
+        </p>
+        <p>
+          <span class="text-red">{{each.mcode}}</span>
+        </p>
+      </ion-col>
+      <ion-col col-6 style="text-align: right;">
+        <p *ngIf="each.gross_wt?.length>0">{{each.gross_wt}}gms
+        </p>
+        <p>
+          <span *ngIf="each.pmode==0">Cash</span>
+          <span *ngIf="each.pmode==2">Credit Card</span>
+          <span *ngIf="each.pmode==6">Debit Card</span>
+          <span *ngIf="each.pmode==1">Cheque</span>
+        </p>
+        <p style="align-content: right;">
+          <span class="text-red">Rs. {{each.amount}}/-</span>
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <!-- <button ion-button clear item-end (click)="print(each)">
+        <ion-icon name="print"></ion-icon>
+      </button> -->
+  </ion-item>
+</ion-content>

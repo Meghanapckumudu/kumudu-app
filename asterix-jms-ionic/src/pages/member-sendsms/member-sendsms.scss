@@ -1,0 +1,48 @@
+page-membersendsms {
+	.card-ios,
+	.card-md,
+	.card-wp {
+		margin: 0px;
+		box-shadow: none;
+		border-radius: 10px;
+		width: 100%;
+		background: #f8f8f8;
+		border: 1px solid #f8eee0;
+	}
+
+	.card-header-ios,
+	.card-header-md,
+	.card-header-wp {
+		color: $cust_clr1;
+		text-align: left;
+		font-size: 30px;
+		padding: 8px 16px;
+	}
+
+	.card-content-ios,
+	.card-content-md,
+	.card-content-wp {
+		padding-top: 10px !important;
+		font-size: 1.4rem;
+		line-height: 1.5;
+		background: #fff;
+		border-top: 1px solid #f8eee0;
+	}
+
+	.button-outline-ios,
+	.button-outline-md,
+	.button-outline-wp {
+		border: 1px solid #f8eee0 !important;
+		color: $cust_clr1;
+		border-radius: 10px !important;
+	}
+	.ion-label {
+		color: $cust_clr1;
+	}
+}
+
+.custom-button {
+    background-color: $optcolor;
+    color: #fff;
+   // border-radius: 5px;
+}

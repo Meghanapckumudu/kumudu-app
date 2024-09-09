@@ -1,0 +1,142 @@
+<!--
+  Generated template for the PaymentModePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Join Chit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Scheme</ion-label>
+      <ion-select [(ngModel)]="scheme.name">
+        <ion-option value="s1">Scheme 1</ion-option>
+        <ion-option value="s2">Scheme 2</ion-option>
+        <ion-option value="s3">Scheme 3</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label stacked>Group</ion-label>
+            <ion-select [(ngModel)]="scheme.group">
+              <ion-option value="g1">Group 1</ion-option>
+              <ion-option value="g2">Group 2</ion-option>
+              <ion-option value="g3">Group 3</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+
+        <ion-col col-6>
+          <ion-item>
+            <ion-label stacked>Rate</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="scheme.rate"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+
+
+      <ion-row>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label stacked>Memb Code</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="scheme.memberCode"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col col-6>
+          <ion-item>
+            <ion-label stacked>Instal Amt</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="scheme.instalement"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+
+    <ion-item>
+      <ion-label stacked>Amount</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.amount"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Weight</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.weight"></ion-input>
+    </ion-item>
+
+    
+
+    <ion-item text-center>
+      <button ion-button default class="btn-orange" (click)=goToPaymentPage()>Join</button>
+    </ion-item>
+
+    <div class="page-title">Customer Detail</div>
+
+    <ion-item>
+      <ion-label stacked>Title</ion-label>
+      <ion-select [(ngModel)]="scheme.initial">
+        <ion-option value="mr">Mr.</ion-option>
+        <ion-option value="mrs">Mrs.</ion-option>
+        <ion-option value="miss">Miss.</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Name</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Address Line 1</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.add1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Address Line 2</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.add2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Address Line 3</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.add3"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>City</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Pincode</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.pincode"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Phone</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Mobile</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.mobile"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="scheme.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Date of Birth</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="scheme.dob"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Anniversary</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="scheme.anniversary"></ion-datetime>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

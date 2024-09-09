@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="navigation">
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title *ngIf="data.userLoginType=='agent'">Search</ion-title>
+    <ion-title *ngIf="data.userLoginType=='customer'">My Saving Plans</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content no-padding>
+
+  <ion-searchbar class="custom-input-shadow11" *ngIf="data.userLoginType=='agent'" [(ngModel)]="searchTerm" (search)="searchByKeyword($event)"
+    placeholder="Enter Group Code - MemberNo or Member Mobile or Member Name - Place">
+  </ion-searchbar>
+
+
+  <!-- <ion-list> -->
+    <ion-card *ngFor="let eachScheme of schemes">
+      <ion-item (click)="goToSchemeDetailPage(eachScheme.mgroup+'-'+eachScheme.member_no)">
+        <ion-label>
+          <h2>{{eachScheme.name}} </h2>
+          <p>{{eachScheme.mobile}} |
+            <span class="text-red">{{eachScheme.mgroup}}-{{eachScheme.member_no}}</span>
+            <span class="text-red amt-right">Rs. {{eachScheme.amountPaid}}</span>
+          </p>
+        </ion-label>
+        <!-- <input type="checkbox" color="primary" checked="true" /> -->
+      </ion-item>
+    </ion-card>
+  <!-- </ion-list> -->
+  <!-- <div *ngIf="schemes?.length==0" class="custom-message">You have no Registered Schemes</div> -->
+
+  <ion-item text-center no-lines *ngIf="schemes?.length == 0">
+    <button class="btn-pay" ion-button (click)="onSearch()">Search</button>
+  </ion-item>
+  
+
+
+</ion-content>

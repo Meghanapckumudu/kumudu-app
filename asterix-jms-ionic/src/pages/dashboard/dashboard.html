@@ -1,0 +1,183 @@
+<ion-header>
+    <ion-navbar color="navigation">
+      <ion-buttons start>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title><img alt="logo" id="header_logo" height="30" float-left src="assets/imgs/jms1.png">
+        {{data.loggedInUserObj['store']['storeName']}} </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+
+  <ion-grid *ngIf="data.userLoginType=='agent'">
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-card class="cardBg">
+          <ion-card-header>
+            {{metrics.COLLECTIONS}}
+          </ion-card-header>
+          <ion-card-content class="TextColor">
+            Today Collection
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+    <!-- <div *ngIf="!pushes.length" class="empty">
+      <ion-item>
+        You have no notifications.
+      </ion-item>
+    </div> -->
+
+  </ion-grid>
+
+  <div *ngIf="rateslist.length > 0">
+    <ion-item>
+      <ion-label text-wrap *ngFor="let each of rateslist">
+        <p>{{each.metal}} Rate @ {{each.purity}} : Rs.{{each.rate}}/- </p>
+      </ion-label>
+    </ion-item>
+  </div>
+
+  <div>
+    <ion-list>
+      <!-- <ion-list-header></ion-list-header> -->
+      <!-- <ion-item> Notifications </ion-item> -->
+      <ion-item *ngFor="let push of pushes">
+        <ion-label text-wrap>
+          <p>{{push.title}}</p>
+          <p>{{push.body}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- <ion-row>
+      <ion-col col-12>
+        <ion-card>
+          <ion-card-header>
+              <button ion-button class="light-orange" clear end (click)="goToMemberUpdate()">
+                  <span class="orange">Member-Update</span>
+               </button>
+          </ion-card-header>
+          <ion-card-content>
+              Member Info Update
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row> -->
+
+  <!-- 
+    <ion-row>
+      <ion-col col-12>
+        <ion-card>
+          <ion-card-header>
+            {{metrics.MESSAGES}}
+          </ion-card-header>
+          <ion-card-content>
+            Unread Messages
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row> -->
+
+
+  <div class="image-slide">
+    <ion-slides pager="true">
+      <ion-slide>
+        <img src="{{slide1}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{slide2}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{slide3}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{slide4}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{slide5}}">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <!-- <button full ion-button (click)="pay()" style="display: none;">PAY</button> -->
+  <ion-grid *ngIf="data.userLoginType=='customer'">
+    <!-- <h1>Welcome {{data.loggedInUserObj.name}} to {{data.loggedInUserObj['store']['storeName']}}</h1> -->
+    <div>
+      <ion-card class="TextColor">
+        <ion-card-content>
+          Welcome {{data.loggedInUserObj.name}} to {{data.loggedInUserObj['store']['storeName']}}
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="cardBg">
+          <img class="image-card" src="{{slide1}}" />
+          <ion-item>
+            <button ion-button clear end (click)="dojoinscheme()">New Plan</button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col *ngIf="data.userLoginType=='customer'">
+        <ion-card class="cardBg" *ngIf="data.userLoginType=='customer'">
+          <img class="image-card" src="{{slide2}}" />
+          <ion-item>
+            <button ion-button clear end *ngIf="data.userLoginType=='customer'" (click)="goToMyChits()">My
+              Plans</button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="cardBg">
+          <img class="image-card" src="{{slide3}}" />
+          <ion-item>
+            <button ion-button clear end (click)="test()">Payments</button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="cardBg">
+          <img class="image-card" src="{{slide4}}" />
+          <ion-item>
+            <button ion-button clear end (click)="test()">Statement</button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="cardBg">
+          <img class="image-card" src="{{slide5}}" />
+          <ion-item>
+            <button ion-button clear end (click)="test()">Offers</button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="cardBg">
+          <img class="image-card" src="{{slide1}}" />
+          <ion-item>
+            <button ion-button clear end (click)="test()">Loyalty</button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="data.userLoginType=='customer'">
+
+  </ion-grid>
+
+
+</ion-content>

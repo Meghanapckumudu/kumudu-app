@@ -1,0 +1,300 @@
+.page-login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f4f4f4; /* Adjust background color as needed */
+  }
+  
+  .ion-card-login {
+	max-width: 400px;
+	width: 90%;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow:0px 0px 10px 5px rgba(0, 0, 0, 0.1)
+  }
+  
+  .logo {
+	text-align: center;
+	margin-bottom: 20px;
+  }
+  
+  .form-group {
+	margin-bottom: 20px;
+  }
+  
+  .form-group:last-child {
+	margin-bottom: 0;
+  }
+  
+  .form-label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+  }
+  
+  .form-input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+  
+  .form-button {
+	width: 100%;
+	padding: 10px;
+	background-color: var(--primary-color);
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .form-button:hover {
+	background-color: #0056b3; /* Adjust hover color as needed */
+  }
+  
+  .link {
+	text-align: center;
+	color: var(--secondary-color);
+	text-decoration: none;
+	display: block;
+	margin-top: 10px;
+  }
+  
+  .link:hover {
+	text-decoration: underline;
+  }
+
+
+  .footer-links {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	background-color: #fff; /* Adjust background color as needed */
+	box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  }
+  
+  .link-item {
+	margin: 1%;
+	width:24%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5px 10px 8px 2px;
+	border-radius: 5px;
+	background-color: #f5f5f5; /* Adjust background color as needed */
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  .link-item a
+  {
+   color: #333;
+  }
+  
+  .link-item:hover {
+	background-color: #e0e0e0; /* Adjust hover background color as needed */
+  }
+  
+  .link-item ion-icon {
+	font-size: 2rem;
+  }
+  
+  .link-item span {
+	margin-top: 5px;
+	font-size: 0.9rem;
+  }
+
+
+
+  .custom-dropdown {
+	position: relative;
+  }
+  
+  .custom-dropdown label {
+	display: block;
+	margin-bottom: 5px;
+	color: #333; /* Label color */
+  }
+  
+  .custom-dropdown select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9; /* Dropdown background color */
+	cursor: pointer;
+	width: 100%;
+	color: #333; /* Dropdown text color */
+  }
+  
+  .custom-dropdown select:focus {
+	outline: none;
+	border-color: $optcolor; /* Focus border color */
+  }
+  
+  .custom-dropdown select::after {
+	content: "\25BC"; /* Unicode character for down arrow */
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	color: #333; /* Arrow color */
+  }
+  
+  .custom-dropdown select option {
+	background-color: #fff; /* Option background color */
+	color: #333; /* Option text color */
+  }
+  
+  .custom-dropdown select option:hover {
+	background-color: #f0f0f0; /* Hovered option background color */
+  }
+  
+
+
+
+.btn-orangebtn_new {
+	margin-left: 66%;
+	background-color: $optcolor;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  .btn-orangebtn_new:hover {
+	background-color: $themecolor;
+  }
+  
+  .input-class{
+	color: $loginiconcoor;
+  }
+
+  
+
+  .custom-dropdown {
+	position: relative;
+  }
+  
+  .custom-select {
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	color: #333;
+	font-size: 16px;
+	width: 100%;
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+  }
+  
+  .custom-select:focus {
+	outline: none;
+  }
+  
+  .custom-select::after {
+	content: "\25BC";
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	color: #333;
+  }
+  
+  .custom-select option {
+	background-color: #fff;
+	color: #333;
+  }
+  
+  .custom-select:focus-visible {
+	outline: none;
+  }
+  
+  .custom-select:focus::-webkit-outer-spin-button,
+  .custom-select:focus::-webkit-inner-spin-button {
+	display: none;
+  }
+  
+  .custom-select:focus::-ms-expand {
+	display: none;
+  }
+
+  .button-container {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Align items with space between */
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.left-button, .right-button {
+    width: 50%; /* Each button takes half the width of the container */
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.align-left{
+	margin: 0px 0px 0px 16px;
+}
+
+
+
+
+
+/* Example CSS Styles */
+.center-toolbar {
+   text-align: center; /* Align items vertically at the center */
+}
+
+
+.custom-input-shadow {
+	margin-right: 3%;
+    border: 1px solid #ccc;
+    background-color: #fff; /* Add background color */
+	
+}
+
+.custom-input-shadow1{
+	margin-right: 8%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.custom-input-shadow11{
+
+		border-bottom: 1px solid #ccc;
+		
+	
+}
+
+.custom-input-shadow1.input-no-border {
+    border-bottom: none; /* Remove bottom border */
+}
+
+.custom-button22 {
+    height: 36px !important;
+    width: 80%;
+    background-color: $optcolor;
+    color: #fff;
+}
+
+
+
+.custom-button33{
+	height: 36px !important;
+    width: 90%;
+    background-color: $optcolor;
+    color: #fff;
+}
+
+.item-inner {
+	border-bottom: none !important;
+	box-shadow: none !important;
+  }

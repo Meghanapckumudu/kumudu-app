@@ -1,0 +1,381 @@
+<ion-header color="navigation">
+    <ion-toolbar color="navigation" class="center-toolbar">
+        <ion-title *ngIf="mode=='otp' || mode=='reg-otp'" class="otp-title">OTP Verification</ion-title>
+        <ion-title *ngIf="mode=='login'" class="login-title">LOGIN</ion-title>
+        <ion-title *ngIf="mode=='register'" class="register-title">Registration</ion-title>
+        <ion-title *ngIf="mode=='recover'" class="recover-title">Recover</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-item class="logo" no-lines>
+        <div text-center>
+            <img src="assets/imgs/logo.png" alt="logo" height="130px" width="130px">
+        </div>
+    </ion-item>
+
+    <div *ngIf="mode=='otp'" text-center>
+        <ion-card class="ion-card-login" text-center>
+            <ion-item>
+                <ion-label class="input-icon no-under-border">
+                    <ion-icon name="timer" class="input-class"></ion-icon>
+                </ion-label>
+                <ion-input class="custom-input-shadow1" type="password" placeholder="OTP" autocomplete="off" [(ngModel)]="login.otp"> </ion-input>
+            </ion-item>
+
+            <!-- <ion-item text-right *ngIf="mode=='otp'">
+        </ion-item> -->
+            <ion-item text-center text-center no-lines>
+                <button  class="custom-button33"   ion-button (click)="doOTPValidate()">Submit OTP</button>
+            </ion-item>
+
+
+
+            <ion-item text-center text-center no-lines>
+                <button  class="custom-button33"   ion-button (click)="ResendOtp_Agent()">Resend OTP</button>
+            </ion-item>
+
+
+            <!-- <button   class="custom-button22" ion-button (click)="ResendOtp_Agent()" clear end>
+                R<span text-lowercase>e- </span> S<span text-lowercase>end OTP12</span>
+
+            </button> -->
+
+            <ion-item text-center text-center no-lines>
+                <button  class="custom-button33"   ion-button (click)="changeMode('login')">LOGIN</button>
+            </ion-item>
+
+            <!-- <button  class="custom-button22"  ion-button clear end (click)="changeMode('login')">
+                <span>LOGIN</span>
+            </button> -->
+            
+        </ion-card>
+    </div>
+
+    <div *ngIf="mode=='reg-otp'" text-center>
+        <ion-card class="ion-card-login">
+            <ion-item>
+                <!-- <ion-label class="input-icon">
+                    <ion-icon name="timer" class="input-icon"></ion-icon>
+                </ion-label> -->
+                <!-- <ion-input class="custom-input" type="password" placeholder="OTP sent to mobile" autocomplete="off" [(ngModel)]="login.otp">
+                </ion-input> -->
+             
+                    <ion-input class="custom-input-shadow" type="password" placeholder="OTP sent to mobile" [(ngModel)]="login.otp"></ion-input>
+               
+            </ion-item>
+
+         
+
+            <ion-item text-center text-center no-lines >
+                <button class="custom-button33" ion-button (click)="doCustomerOTPValidate()">Validate OTP</button>
+            </ion-item>
+
+
+            <ion-item text-center text-center no-lines>
+                <button  class="custom-button33"   ion-button (click)="ResendOtp()">Resend OTP</button>
+            </ion-item>
+
+
+
+            <ion-item text-center text-center no-lines>
+                <button  class="custom-button33"   ion-button (click)="changeMode('register')">Register</button>
+            </ion-item>
+
+            
+
+            <!-- <ion-item text-center text-center no-lines no-padding no-margin>
+                <button class="custom-button33" text-center ion-button (click)="ResendOtp()" clear end>
+                    R<span text-lowercase>e - </span> S<span text-lowercase>end OTP!!</span>
+                </button>
+                <br>
+                <button class="custom-button33" text-center ion-button clear end (click)="changeMode('register')">
+                    R<span text-lowercase padding-right>
+                        egister
+                    </span>
+                </button>
+            </ion-item> -->
+
+        </ion-card>
+    </div>
+
+
+
+
+    <div *ngIf="mode=='login'" class="align-left">  
+
+        <ion-card class="ion-card-login">
+            <ion-item class="input-has-focus">
+                <ion-label class="input-class">
+                    <ion-icon  name="phone-portrait" class="input-class"></ion-icon>
+                </ion-label>
+                <ion-input class="custom-input-shadow11" type="text"  placeholder="Mobile" autocomplete="off"
+                    [(ngModel)]="login.username" #a (keyup.enter)="setFocus(b)" (ionFocus)="checkFocus()"
+                    (ionBlur)="checkBlur()">
+                </ion-input>
+            </ion-item>
+
+            <ion-item class="input-has-focus">
+                <ion-label class="input-class">
+                    <ion-icon name="lock" class="input-class"></ion-icon>
+                </ion-label>
+                <ion-input class="custom-input-shadow11" [type]="passwordType" placeholder="Password" autocomplete="off"
+                    [(ngModel)]="login.password" #b (ionFocus)="checkFocus()" (ionBlur)="checkBlur()">
+                </ion-input>
+                <ion-icon item-end [name]="passwordIcon" class="input-class" (click)='hideShowPassword()'>
+                </ion-icon>
+            </ion-item>
+
+            <ion-item text-center>
+                <button class="custom-button"   style="padding:10px !important;margin:0px !important;" ion-button
+                    (click)="doLogin()">LOGIN</button>
+            </ion-item>
+            <!-- <div *ngIf="data.customersCanRegister" (click)="changeMode('register')" text-center
+               >
+                <ion-label color="custom-input">
+                     Dont Have An Account? <b>Sign-Up</b>
+                </ion-label>
+            </div>
+            <div (click)="changeMode('recover')" text-center >
+                <ion-label color="custom-input"> <b>Forgot Password ?</b>   </ion-label>
+            </div> -->
+
+            <div class="button-container">
+                <div *ngIf="data.customersCanRegister" (click)="changeMode('register')" class="left-button" text-center>
+                    <ion-label color="custom-input"><b>Sign-Up</b></ion-label>
+                </div>
+                <div (click)="changeMode('recover')" class="right-button" text-center>
+                    <ion-label color="custom-input"><b>Forgot Password ?</b></ion-label>
+                </div>
+            </div>
+            
+        </ion-card>
+    </div>
+
+
+
+
+
+    
+
+    <div *ngIf="mode=='recover'">
+        <ion-card class="ion-card-login">
+            <ion-item>
+                <ion-input class="custom-input-shadow" type="text" placeholder="Enter Registered Mobile Number" [(ngModel)]="recoverObj.mobile"></ion-input>
+            </ion-item>
+    
+             <div class="custom-dropdown" *ngIf="!recoverObj.branch">
+                <ion-item [ngClass]="{'hide-element': branches.length <= 1}" class="custom-form-row">
+                    <div class="custom-form-row">
+                        <label class="custom-label">Select Branch</label>
+                        <select class="custom-input1 custom-select" [(ngModel)]="recoverObj.branch">
+                            <option *ngFor="let branch of branches" [value]="branch.branch_code">{{ branch.branch_name }}</option>
+                        </select>
+                    </div>
+                </ion-item>
+            </div> 
+    
+            <ion-item text-center no-lines no-padding no-margin>
+                <button ion-button (click)="RecoverPassword()" class="custom-button">Recover</button>
+            </ion-item>
+            <!-- <ion-item text-center no-lines no-padding no-margin>
+                <button ion-button class="custom-button clear" (click)="changeMode('login')">
+                    <span>LOGIN11</span>
+                </button>
+            </ion-item> -->
+            <ion-item text-center text-center no-lines no-padding no-margin>
+                <button  class="custom-button"   ion-button (click)="changeMode('login')">LOGIN</button>
+            </ion-item>
+        </ion-card>
+    </div>
+    
+    
+
+
+    <div class="custom-registration-form">
+        <div *ngIf="mode=='register'">
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item class="custom-form-item">
+                        <ion-input class="custom-input-shadow11" type="number" maxlength="10" placeholder="Mobile" [(ngModel)]="registerObj.mobile" #b1 (ionBlur)="GetMemberAddressByMobile()" (keyup.enter)="setFocus(a1)">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item class="custom-form-item">
+                        <ion-input class="custom-input-shadow11" type="text" placeholder="Name" [(ngModel)]="registerObj.name" #a1 (keyup.enter)="setFocus(c1)">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col col-10">
+                    <ion-item class="custom-form-item">
+                        <ion-input class="custom-input-shadow11" type="text" placeholder="Address 1" [(ngModel)]="registerObj.address1" #d1 (keyup.enter)="setFocus(e1)"> </ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col class="col-2">
+                    <button ion-button default class="btn-orangebtn_new" clear end (click)="GetLocation()">
+                        <ion-icon name="pin" (click)="GetLocation()"> </ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item class="custom-form-item">
+                        <ion-input class="custom-input-shadow11" type="text" placeholder="Address 2" [(ngModel)]="registerObj.address2" #e1 (keyup.enter)="setFocus(f1)"> </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item class="custom-form-item">
+                        <ion-input class="custom-input-shadow11" type="text" placeholder="Address 3" [(ngModel)]="registerObj.address3" #f1 (keyup.enter)="setFocus(g1)"> </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item class="custom-form-item">
+                        <ion-input class="custom-input-shadow11" type="text" placeholder="Place" [(ngModel)]="registerObj.place" #g1 (keyup.enter)="setFocus(h1)">
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item class="custom-form-item">
+                        <ion-input class="custom-input-shadow11" type="text" placeholder="PinCode" [(ngModel)]="registerObj.pincode" #h1> </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item class="custom-form-item">
+                        <ion-select class="custom-input-shadow11" [(ngModel)]="registerObj.branch" color="primary" placeholder="Select Branch" #i1 interface="popover">
+                            <ion-option color="primary" *ngFor="let branch of branches" value="{{branch.branch_code}}">
+                                {{branch.branch_name}}
+                            </ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            
+            
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item class="custom-form-item">
+                        <ion-input [type]="passwordType" class="custom-input-shadow11" placeholder="Password" [(ngModel)]="registerObj.password" #j1 (keyup.enter)="setFocus(j1)"> </ion-input>
+                        <ion-icon item-end [name]="passwordIcon" class="input-class" (click)='hideShowPassword()'>
+                        </ion-icon>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item class="custom-form-item">
+                        <ion-input type="password" class="custom-input-shadow11" placeholder="Confirm Password" [(ngModel)]="registerObj.cpassword" #k1>
+                        </ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+                    <ion-item text-center no-lines>
+                        <button  class="custom-button" ion-button (click)="register()">REGISTER</button>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="custom-form-row">
+                <ion-col class="custom-form-col">
+
+
+
+                    <ion-item text-center text-center no-lines>
+                        <button  class="custom-button"   ion-button (click)="changeMode('login')">LOGIN</button>
+                    </ion-item>
+
+
+                    <!-- <ion-item text-center no-lines>
+                        <button  class="custom-button" ion-button clear end >
+                            <span>LOGIN</span>
+                        </button>
+                    </ion-item> -->
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+
+<!-- 
+    <div *ngIf="mode=='login'" [hidden]="isShown" class="footer-links">
+        <div class="link-item" (click)="openTermsNew()">
+            <ion-icon name="checkmark"></ion-icon>
+            <span>Terms</span>
+        </div>
+        <div class="link-item" (click)="openReturnPolicyNew()">
+            <ion-icon name="cash"></ion-icon>
+            <span>Refund Policy</span>
+        </div>
+        <div class="link-item" (click)="openContactNew()">
+            <ion-icon name="mail"></ion-icon>
+            <span>Contact Us</span>
+        </div>
+        <div class="link-item" (click)="openPrivacyPolicyNew()">
+            <ion-icon name="finger-print"></ion-icon>
+            <span>Privacy Policy</span>
+        </div>
+    </div> -->
+    
+    <div *ngIf="mode=='login'" [hidden]="isShown" class="footer-links">
+        <div class="link-item" (click)="openTermsNew()">
+            <ion-icon name="checkmark"></ion-icon>
+            <span>Terms</span>
+        </div>
+        <div class="link-item" (click)="openReturnPolicyNew()">
+            <ion-icon name="cash"></ion-icon>
+            <span>Refund Policy</span>
+        </div>
+        <div class="link-item" (click)="openContactNew()">
+            <ion-icon name="mail"></ion-icon>
+            <span>Contact Us</span>
+        </div>
+        <div class="link-item" (click)="openPrivacyPolicyNew()">
+            <ion-icon name="finger-print"></ion-icon>
+            <span>Privacy Policy</span>
+        </div>
+    </div> 
+    
+    <!-- <div *ngIf="mode=='login'" [hidden]="isShown" class="footer-links"> 
+        <div class="link-item" >
+            <ion-icon name="checkmark"></ion-icon>
+            <span>Terms</span>
+        </div>
+        <div class="link-item" >
+            <ion-icon name="cash"></ion-icon>
+            <span>Refund Policy</span>
+        </div>
+        <div class="link-item" >
+            <ion-icon name="mail"></ion-icon>
+            <span>Contact Us</span>
+        </div>
+        <div class="link-item" >
+            <ion-icon name="finger-print"></ion-icon>
+            <span>Privacy Policy</span>
+        </div>
+    </div> -->
+    
+    
+
+
+
+
+
+</ion-content>
+<ion-footer>
+
+    <ion-toolbar  color="navigation"></ion-toolbar>
+</ion-footer>
