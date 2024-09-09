@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "173039620072",
+    "firebase_url": "https://jpj5-828be.firebaseio.com",
+    "project_id": "jpj5-828be",
+    "storage_bucket": "jpj5-828be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173039620072:android:7501a630771b9671f25e5d",
+        "android_client_info": {
+          "package_name": "com.asterix.jpj5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173039620072-9qmtar0srbutf7k7poic5uj4dcfne6f6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQqcUyeLB69AKTiUxM-cUimngPnKa0Vcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173039620072-9qmtar0srbutf7k7poic5uj4dcfne6f6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "137750337579",
+    "firebase_url": "https://pushnotification-4bf42.firebaseio.com",
+    "project_id": "pushnotification-4bf42",
+    "storage_bucket": "pushnotification-4bf42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137750337579:android:fa9a06ade857729d39b26e",
+        "android_client_info": {
+          "package_name": "com.asterix.pnfn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137750337579-knul85nebqs7ldrs7on3fuqb21enpr2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBACFzajG-W5Y50wR2uozcELBqfeGi2tew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137750337579-knul85nebqs7ldrs7on3fuqb21enpr2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

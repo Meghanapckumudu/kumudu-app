@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "458552863400",
+    "project_id": "national-gold-palace",
+    "storage_bucket": "national-gold-palace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458552863400:android:b1fafc9c8d1ace7ddd309d",
+        "android_client_info": {
+          "package_name": "com.asterix.ngp22"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458552863400-54fp7e4snqj5ul22eb05ijmu523aog5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIXlG4G4TAR2C57azg7ZWbV-TwcB0hwIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458552863400-54fp7e4snqj5ul22eb05ijmu523aog5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

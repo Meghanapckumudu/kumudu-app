@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "714026898047",
+    "project_id": "rhr3-5f21e",
+    "storage_bucket": "rhr3-5f21e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714026898047:android:479c695e5568a2b939654a",
+        "android_client_info": {
+          "package_name": "com.asterix.rhr3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714026898047-ovqrjeggpajd43ssr75f44ae3l766rip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTzTxF-iXqYeTN_Ii1DpAXFazAxnuvhbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714026898047-ovqrjeggpajd43ssr75f44ae3l766rip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

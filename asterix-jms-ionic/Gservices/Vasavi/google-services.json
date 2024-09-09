@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "484613176658",
+    "firebase_url": "https://svj32-b112c.firebaseio.com",
+    "project_id": "svj32-b112c",
+    "storage_bucket": "svj32-b112c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484613176658:android:fda5bda703dcc277684e8b",
+        "android_client_info": {
+          "package_name": "com.asterix.svj32"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484613176658-h2rq4aol0sgbotddkqapvjnnnmjfnt80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLgmalIhO7Bkb1FvD4I1KsFFHeLnKijk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484613176658-h2rq4aol0sgbotddkqapvjnnnmjfnt80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

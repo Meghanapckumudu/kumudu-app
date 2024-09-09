@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1056177394143",
+    "project_id": "ashok-thanga-maaligai",
+    "storage_bucket": "ashok-thanga-maaligai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056177394143:android:6ca23019fed862898db46a",
+        "android_client_info": {
+          "package_name": "com.asterix.atm44"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056177394143-iijuvie87muptb1229hb2kov07v6jgs9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp43URqxSpE-rQ28q9A7dBZ_TtP82Ed00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056177394143-iijuvie87muptb1229hb2kov07v6jgs9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

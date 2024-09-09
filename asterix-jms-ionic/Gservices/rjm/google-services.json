@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "568726061994",
+    "firebase_url": "https://rjm11-20af0.firebaseio.com",
+    "project_id": "rjm11-20af0",
+    "storage_bucket": "rjm11-20af0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568726061994:android:3b75a7fe9d258af2eca1d3",
+        "android_client_info": {
+          "package_name": "com.asterix.RJM11"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568726061994-2gfhl9787crv9cpvsd5cn75hqn4r8qdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBngkTxRkyFbjXCClGzn-CDT7pbSfqyo7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568726061994-2gfhl9787crv9cpvsd5cn75hqn4r8qdp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

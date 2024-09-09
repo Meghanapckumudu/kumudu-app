@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "177694077282",
+    "firebase_url": "https://kmd10-b2093.firebaseio.com",
+    "project_id": "kmd10-b2093",
+    "storage_bucket": "kmd10-b2093.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177694077282:android:a8fa0da1400bc3ad6a3c3b",
+        "android_client_info": {
+          "package_name": "com.asterix.KMD10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177694077282-7eig2s7m0q4m2p32u1gd1a27gi35mnp4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB1AdhmSwFCUKdBRh3sYDBYWwrPUmvTrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177694077282-7eig2s7m0q4m2p32u1gd1a27gi35mnp4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

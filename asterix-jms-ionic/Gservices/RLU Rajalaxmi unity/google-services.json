@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "579311215499",
+    "project_id": "rlu36-52d7c",
+    "storage_bucket": "rlu36-52d7c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579311215499:android:e078689fe75f56d109458e",
+        "android_client_info": {
+          "package_name": "com.asterix.rlu36"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579311215499-li8486omu1b6c7h80uprv4ikmcv6icsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD62OH0j3iKWqe4PAtQpkZBVoX6yeli7ZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579311215499-li8486omu1b6c7h80uprv4ikmcv6icsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

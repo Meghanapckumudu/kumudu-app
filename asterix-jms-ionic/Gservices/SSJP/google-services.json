@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "414972776615",
+    "project_id": "ssjp-eaf27",
+    "storage_bucket": "ssjp-eaf27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414972776615:android:339fcc865a5c2a34c00b82",
+        "android_client_info": {
+          "package_name": "com.asterix.ssjp8"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414972776615-dd9s069f41i6njv7c4r3r29o9o1ikd0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsok0XqhGOph_4hY2bW8uZA2rQRQJFGuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414972776615-dd9s069f41i6njv7c4r3r29o9o1ikd0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

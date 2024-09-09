@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "928678494614",
+    "project_id": "sri-mahalakshmi-jewellers",
+    "storage_bucket": "sri-mahalakshmi-jewellers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928678494614:android:6c16e95cb6d4af60ba1db7",
+        "android_client_info": {
+          "package_name": "com.asterix.mahalaxmi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCo7Q5y98ZtT5GquKfk81kGXOpgtvgijp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

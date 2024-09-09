@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "638884440526",
+    "firebase_url": "https://verma31-f83fb.firebaseio.com",
+    "project_id": "verma31-f83fb",
+    "storage_bucket": "verma31-f83fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638884440526:android:cdce7c2f26e5fee627639f",
+        "android_client_info": {
+          "package_name": "com.asterix.Verma31"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638884440526-qimj0ikt485oh85g1slnk6anilu1eaq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjON3IjpD-C5wHb3wIaD3PnF_ZydNH8pw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638884440526-qimj0ikt485oh85g1slnk6anilu1eaq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

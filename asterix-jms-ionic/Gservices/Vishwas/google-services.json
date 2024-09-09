@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "894224236729",
+    "project_id": "vjt6-ad057",
+    "storage_bucket": "vjt6-ad057.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894224236729:android:62cb32f35b1ffa94e11b68",
+        "android_client_info": {
+          "package_name": "com.asterix.vjt6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894224236729-s2226kr6cd0ngmuhhot4iie1cqi80dbd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCImPFwPqtKyWHZP9x6db9-4zD2K4HbYJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894224236729-s2226kr6cd0ngmuhhot4iie1cqi80dbd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

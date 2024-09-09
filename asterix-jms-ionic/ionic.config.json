@@ -1,0 +1,7 @@
+{
+  "name": "asterix-jms",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "72587223838",
+    "project_id": "uday18-d3bd3",
+    "storage_bucket": "uday18-d3bd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72587223838:android:37b80b62303d842e4a9f0f",
+        "android_client_info": {
+          "package_name": "com.asterix.uday18"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72587223838-trvoh7sbr9afshc5922m782c5im7slah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8uBF4wj8Lx356UMXnr9L_FAL0o1g4HjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72587223838-trvoh7sbr9afshc5922m782c5im7slah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
